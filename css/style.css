@@ -80,7 +80,7 @@ header {
         color: black; }
 
 main {
-  height: 1010px; }
+  height: 1110px; }
 
 main .container__home {
   width: fit-content;
@@ -289,20 +289,21 @@ main .container__home {
   position: relative; }
 
 /* CONTAINER */
-main .container .container__boutique .container__boutique--title {
-  color: white;
-  padding: 1.5em 0 1em 0;
-  text-align: center;
-  font-family: "Comfortaa", cursive;
-  font-style: italic;
-  font-weight: normal; }
-
-main .container .container__boutique .container__boutique--card {
-  background-color: #b6d7a8;
-  border: solid 1px #3b9655;
-  font-family: "Comfortaa", cursive;
-  font-style: normal;
-  font-weight: normal; }
+main .container .container__boutique {
+  margin-top: 2em; }
+  main .container .container__boutique .container__boutique--title {
+    color: white;
+    padding: 1.5em 0 1em 0;
+    text-align: center;
+    font-family: "Comfortaa", cursive;
+    font-style: italic;
+    font-weight: normal; }
+  main .container .container__boutique .container__boutique--card {
+    background-color: #b6d7a8;
+    border: solid 1px #3b9655;
+    font-family: "Comfortaa", cursive;
+    font-style: normal;
+    font-weight: normal; }
 
 main .container .container__boutique--card-title {
   text-align: left;
@@ -330,7 +331,9 @@ main .container .container__home--button {
     border: 1px solid #296b3c; }
   main .container .container__home--button a {
     text-decoration-line: none !important;
-    color: white; }
+    color: white !important; }
+    main .container .container__home--button a:hover {
+      color: #3b9655 !important; }
 
 main section .container__np--title {
   color: #4c1130;
@@ -343,7 +346,7 @@ main section .container__np--title {
 
 main .container__np--text {
   color: #4c1130;
-  text-align: center;
+  text-align: justify;
   line-height: 2;
   margin: 0 7em;
   font-family: "Comfortaa", cursive;
@@ -351,8 +354,8 @@ main .container__np--text {
   font-weight: normal; }
   main .container__np--text .container__np--sign {
     color: #4c1130;
-    text-align: center;
     line-height: 3;
+    margin: 3em 0 0 15em;
     font-family: "Comfortaa", cursive;
     font-size: 1.2rem !important;
     font-style: italic;
@@ -364,6 +367,7 @@ main .container__form .container__form--title {
   padding: 1.5em 0 1em 0;
   text-align: center;
   font-family: "Comfortaa", cursive;
+  font-size: 1.3rem;
   font-style: italic;
   font-weight: normal; }
 
@@ -407,7 +411,58 @@ main .container__form .newsletter {
       color: white !important;
       text-decoration-line: none; }
 
-main .container .container__internal .container__internal--title {
+main .contact .container__form--title {
+  color: white;
+  margin-top: 1em;
+  padding: 1.5em 0 1em 0;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: normal; }
+
+main .contact .contact__logos {
+  padding-bottom: 2em; }
+
+main .contact .container__home--buttonWhatsapp {
+  background-color: #b6d7a8;
+  border: none;
+  color: #3b9655 !important;
+  border-radius: 0.6em;
+  font-family: "Handlee", cursive;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-align: center;
+  text-decoration-line: none;
+  width: fit-content;
+  padding: 0.2em;
+  transition: all 0.8s;
+  cursor: pointer; }
+
+main .contact .container__home--buttonModal {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #3b9655;
+  color: #3b9655 !important;
+  border-radius: 0.6em;
+  font-family: "Handlee", cursive;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-align: center;
+  text-decoration-line: none;
+  width: fit-content;
+  padding: 0.2em;
+  transition: all 0.8s;
+  cursor: pointer;
+  margin-left: 1em; }
+  main .contact .container__home--buttonModal:hover {
+    background: #296b3c;
+    border: 1px solid #296b3c;
+    color: white !important;
+    text-decoration-line: none; }
+
+main .container__internal .container__internal--title {
   padding: 1.5em 0 1em 0;
   color: white;
   font-family: "Comfortaa", cursive;
@@ -415,8 +470,21 @@ main .container .container__internal .container__internal--title {
   font-weight: normal;
   text-align: center; }
 
-main .container .container__internal .container__internal--videos {
-  text-align: center; }
+main .container__internal .grid {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 2fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 15px;
+  grid-template-areas: "container__internal--videos1 container__internal--videos2" "container__internal--videos3 container__internal--videos4"; }
+  main .container__internal .grid .container__internal--videos1 {
+    grid-area: "video1"; }
+  main .container__internal .grid .container__internal--videos2 {
+    grid-area: "video2"; }
+  main .container__internal .grid .container__internal--videos3 {
+    grid-area: "video3"; }
+  main .container__internal .grid .container__internal--videos4 {
+    grid-area: "video4"; }
 
 footer {
   width: 100%;
@@ -494,7 +562,7 @@ footer {
   .card-body {
     text-align: center; } }
 
-@media (min-width: 1024px) and (max-width: 1680px) {
+@media (min-width: 1024px) and (max-width: 1920px) {
   footer {
     width: 100%;
     height: 85px;

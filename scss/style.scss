@@ -123,7 +123,7 @@ header {
 
 // OPERACIONES
 main {
-    height: ($height-main / 2) +50px;
+    height: ($height-main / 2) +150px;
 }
 
 // INDEX
@@ -248,6 +248,7 @@ main{
 main{
     .container{
         .container__boutique{
+            margin-top: 2em;
             .container__boutique--title {
                 color: $color-titles;
                 padding: 1.5em 0 1em 0;
@@ -301,11 +302,14 @@ main{
                 }
                 a {
                     text-decoration-line: none!important;
-                    color: $color-titles;
+                    color: $color-titles!important;
+                    &:hover {
+                        color: $color-principal!important;
+                    }
                 }
             }
+            }
         }
-    }
 
 // NOTRE PHILOSOPHIE
 
@@ -325,7 +329,7 @@ main {
             }
                 .container__np--text {
                     color: $color-np;
-                    text-align: center;
+                    text-align: justify;
                     line-height: 2;
                     margin: 0 7em;
                     font: {
@@ -335,8 +339,8 @@ main {
                     }
                     .container__np--sign {
                         color: $color-np;
-                        text-align: center;
                         line-height: 3;
+                        margin: 3em 0 0 15em;
                         font: {
                             family: $font-secondary;
                             size: $font-general !important;
@@ -344,7 +348,7 @@ main {
                             weight: lighter;
                             }
                         }
-                    }    
+                    }
                 }
 
 // CONTACT
@@ -358,6 +362,7 @@ main{
             text-align: center;
             font: {
                 family: $font-secondary;
+                size: $font-h4;
                 style: italic;
                 weight: normal;
             }
@@ -421,12 +426,76 @@ main{
             }
         }
     }
+    .contact{
+        .container__form--title {
+            color: $color-titles;
+            margin-top: 1em;
+            padding: 1.5em 0 1em 0;
+            text-align: center;
+            font: {
+                family: $font-secondary;
+                size: $font-h4;
+                style: italic;
+                weight: normal;
+            }
+        }
+        .contact__logos {
+            padding-bottom: 2em;
+        }
+        .container__home--buttonWhatsapp {
+            background-color: $bg-color-pages ;
+            border: none;
+            color: $color-principal!important;
+            border-radius: 0.6em;
+            font: {
+                family: $font-principal;
+                style: normal;
+                size: $font-general;
+                weight: lighter;
+            }
+            text: {
+            align: center;
+            decoration-line: none;
+            }
+            width: fit-content;
+            padding: 0.2em;
+            transition: all 0.8s;
+            cursor: pointer;
+        }
+        .container__home--buttonModal {
+                background-color: $bg-color-hd-ft ;
+                border: 1px solid $color-principal ;
+                color: $color-principal!important;
+                border-radius: 0.6em;
+                font: {
+                    family: $font-principal;
+                    style: normal;
+                    size: $font-general;
+                    weight: lighter;
+                }
+                text: {
+                align: center;
+                decoration-line: none;
+                }
+                width: fit-content;
+                padding: 0.2em;
+                transition: all 0.8s;
+                cursor: pointer;
+                margin-left: 1em;
+
+                &:hover {
+                    background:$bg-color-btt;
+                    border: 1px solid $bg-color-btt ;
+                    color: $color-titles!important;
+                    text-decoration-line: none;
+                }
+            }
+    }
 }
 
 // VOIR PLUS
 
 main{
-    .container {
         .container__internal {
             .container__internal--title {
                 padding: 1.5em 0 1em 0;
@@ -438,12 +507,33 @@ main{
                 }
                 text-align: center;
             }
-            .container__internal--videos {
-                text-align: center;
+            // nose que onda aca no me esta tomando los gaps, y el grid realmente
+            .grid {
+                display: grid;
+                grid-template-columns: 2fr;
+                grid-template-rows: 2fr;
+                grid-column-gap: 50px;
+                grid-row-gap: 15px;
+                grid-template-areas: 
+                "container__internal--videos1 container__internal--videos2"
+                "container__internal--videos3 container__internal--videos4"
+                ;
+                .container__internal--videos1 {
+                    grid-area: "video1";
+                }
+                .container__internal--videos2 {
+                    grid-area: "video2";
+                }
+                .container__internal--videos3 {
+                    grid-area: "video3";
+                }
+                .container__internal--videos4 {
+                    grid-area: "video4";
+                }
             }
         }
     }
-}
+
 
 // FOOTER
 
@@ -571,7 +661,7 @@ footer {
     }
 }
 
-@media (min-width: 1024px) and (max-width: 1680px) {
+@media (min-width: 1024px) and (max-width: 1920px) {
     @mixin sizes ($width, $height-ftr) { 
         width: $width;
         height: $height-ftr;}

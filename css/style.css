@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box; }
+
+body {
+  background-attachment: fixed;
+  background-color: #b6d7a8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.homeBody {
+  background-attachment: fixed;
+  background-image: url(../media/environmental-protection-326923_1280.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+h1 {
+  font-size: 1.8rem; }
+
+h2 {
+  font-size: 1.6rem; }
+
+h3 {
+  font-size: 1.4rem; }
+
+h4 {
+  font-size: 1.2rem; }
+
+p, a, li {
+  font-size: 1.2rem; }
+
+header, footer {
+  background-color: rgba(255, 255, 255, 0.7); }
+
+header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  header .nav-title {
+    position: relative;
+    top: 0.4em;
+    display: flex; }
+    header .nav-title #logo {
+      color: #3b9655;
+      font-size: 1.6em; }
+    header .nav-title .nav-h1 {
+      padding-left: 0.2em;
+      color: #3b9655;
+      text-decoration-line: none;
+      text-align: left;
+      font-family: "Handlee", cursive;
+      font-style: italic;
+      font-weight: 200; }
+  header .nav {
+    display: flex;
+    position: relative;
+    margin-top: 0.5em;
+    margin-left: auto; }
+    header .nav .nav-link {
+      color: black;
+      font-family: "Handlee", cursive;
+      font-size: 1.3rem;
+      font-style: normal;
+      font-weight: 500; }
+      header .nav .nav-link:hover {
+        text-decoration-line: underline;
+        color: black; }
+
+main {
+  height: 1010px; }
+
+main .container__home {
+  width: fit-content;
+  position: fixed;
+  top: 71%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center; }
+  main .container__home .container__home--title {
+    color: white;
+    font-family: "Handlee", cursive;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: underline; }
+  main .container__home .container__home--button {
+    background-color: #296b3c;
+    border: 1px solid #296b3c;
+    border-radius: 0.6em;
+    font-family: "Handlee", cursive;
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    text-align: center;
+    width: fit-content;
+    padding: 0.2em; }
+    main .container__home .container__home--button:hover {
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid #3b9655; }
+    main .container__home .container__home--button .cta {
+      color: white; }
+      main .container__home .container__home--button .cta:hover {
+        color: #3b9655; }
+
+/* PRODUITS DE SALLE DE BAINS */
+.img-prod1 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod1.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod2 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod2.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod3 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod3.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod4 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod4.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod5 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod5.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod6 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod6.png);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+/* PRODUITS DE LA CUISINE */
+.img-prod7 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod7.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod8 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod8.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod9 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod9.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod10 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod10.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod11 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod11.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod12 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod12.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+/* PRODUITS DE LA MAISON */
+.img-prod13 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod13.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod14 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod14.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod15 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod15.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+/* PRODUITS DE BEBES ET FEMMES */
+.img-prod16 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod16.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod17 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod17.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod18 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod18.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod19 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod19.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod20 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod20.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.img-prod21 {
+  height: 250px;
+  max-width: 376px;
+  background-image: url(../media/img-prod21.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  position: relative; }
+
+/* CONTAINER */
+main .container .container__boutique .container__boutique--title {
+  color: white;
+  padding: 1.5em 0 1em 0;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  font-style: italic;
+  font-weight: normal; }
+
+main .container .container__boutique .container__boutique--card {
+  background-color: #b6d7a8;
+  border: solid 1px #3b9655;
+  width: fit-content;
+  font-family: "Comfortaa", cursive;
+  font-style: normal;
+  font-weight: normal; }
+
+main .container .container__boutique--card-title {
+  font-family: "Comfortaa", cursive;
+  font-style: normal;
+  font-weight: lighter; }
+  main .container .container__boutique--card-title .container__boutique--card-text {
+    font-size: 1.2rem; }
+
+main .container .container__home--button {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #3b9655;
+  color: #3b9655 !important;
+  border-radius: 0.6em;
+  font-family: "Handlee", cursive;
+  font-style: normal;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-align: center;
+  text-decoration-line: none;
+  width: fit-content;
+  padding: 0.2em;
+  transition: all 0.8s;
+  cursor: pointer;
+  margin-left: 1em; }
+  main .container .container__home--button:hover {
+    background: #296b3c;
+    border: 1px solid #296b3c;
+    color: white !important;
+    text-decoration-line: none; }
+
+main section .container__np--title {
+  color: #4c1130;
+  text-align: center;
+  line-height: 1.5;
+  padding: 1.5em 0 1em 0;
+  font-family: "Comfortaa", cursive;
+  font-style: italic;
+  font-weight: normal; }
+
+main .container__np--text {
+  color: #4c1130;
+  text-align: center;
+  line-height: 2;
+  margin: 0 7em;
+  font-family: "Comfortaa", cursive;
+  font-style: normal;
+  font-weight: normal; }
+  main .container__np--text .container__np--sign {
+    color: #4c1130;
+    text-align: center;
+    line-height: 3;
+    font-family: "Comfortaa", cursive;
+    font-size: 1.2rem !important;
+    font-style: italic;
+    font-weight: lighter; }
+
+main .container__form .container__form--title {
+  color: white;
+  margin-top: 1em;
+  padding: 1.5em 0 1em 0;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  font-style: italic;
+  font-weight: normal; }
+
+main .container__form label {
+  font-family: "Comfortaa", cursive;
+  font-style: normal;
+  font-weight: 300; }
+
+main .container__form .form-group .form-control {
+  font-family: "Comfortaa", cursive;
+  font-style: normal;
+  font-weight: 300;
+  margin: 1em 0em; }
+
+main .container__form .newsletter {
+  font-family: "Comfortaa", cursive;
+  font-style: normal;
+  font-weight: 300;
+  margin-top: 1em; }
+  main .container__form .newsletter .newsletter1 {
+    margin-left: 2em; }
+  main .container__form .newsletter .container__home--button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #3b9655;
+    color: #3b9655 !important;
+    border-radius: 0.6em;
+    font-family: "Handlee", cursive;
+    font-style: normal;
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-align: center;
+    text-decoration-line: none;
+    width: fit-content;
+    padding: 0.2em;
+    transition: all 0.8s;
+    cursor: pointer;
+    margin-left: 1em; }
+    main .container__form .newsletter .container__home--button:hover {
+      background: #296b3c;
+      border: 1px solid #296b3c;
+      color: white !important;
+      text-decoration-line: none; }
+
+main .container .container__internal .container__internal--title {
+  padding: 1.5em 0 1em 0;
+  color: white;
+  font-family: "Comfortaa", cursive;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center; }
+
+main .container .container__internal .container__internal--videos {
+  text-align: center; }
+
+footer {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  padding-top: 0.7em; }
+  footer div .subtitle {
+    font-family: "Handlee", cursive;
+    font-weight: lighter;
+    text-decoration-line: underline;
+    margin-left: 1em;
+    margin-right: 2em; }
+  footer div form {
+    margin: 0em 2em; }
+    footer div form #adresse__e-mail {
+      font-family: "Handlee", cursive;
+      font-size: 1.1rem;
+      font-style: normal;
+      font-weight: lighter;
+      text-align: left;
+      line-height: normal;
+      padding: 0em 0.3em 0em 0.3em; }
+    footer div form .container__home--button {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 1px solid #3b9655;
+      border-radius: 0.6em;
+      font-family: "Handlee", cursive;
+      font-style: normal;
+      font-size: 1.2rem;
+      font-weight: lighter;
+      text-align: center;
+      width: fit-content;
+      padding: 0.2em;
+      transition: all 0.8s;
+      cursor: pointer;
+      margin-left: 0.7em; }
+      footer div form .container__home--button:hover {
+        background: #296b3c;
+        border: 1px solid #296b3c; }
+  footer div .social-media__links ul li {
+    display: inline-block; }
+    footer div .social-media__links ul li a #smfacebook, footer div .social-media__links ul li a #sminstagram {
+      color: black;
+      font-size: 2rem;
+      margin-right: 1.3em; }
+
+@media (min-width: 280px) and (max-width: 768px) {
+  footer {
+    width: 100%;
+    height: 85px;
+    display: none;
+    position: absolute;
+    bottom: 0; }
+  .container__boutique--card {
+    text-align: center; }
+  .card-body {
+    text-align: center; } }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  footer {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    padding-top: 0.7em; }
+  .container__boutique--card {
+    text-align: center; }
+  .card-body {
+    text-align: center; } }
+
+@media (min-width: 1024px) and (max-width: 1680px) {
+  footer {
+    width: 100%;
+    height: 85px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    padding-top: 0.7em; } }

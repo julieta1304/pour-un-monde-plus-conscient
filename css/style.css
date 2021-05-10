@@ -82,7 +82,42 @@ header {
 main {
   height: 1110px; }
 
-main .container__home {
+main .carousel .carousel__title {
+  color: white;
+  padding: 1.5em 0 1em 0;
+  text-align: left;
+  font-family: "Comfortaa", cursive;
+  font-style: italic;
+  font-weight: normal; }
+
+main .carousel .carousel-img1 {
+  height: 250px;
+  width: 376px;
+  background-image: url(../media/img-prod14.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: relative; }
+
+main .carousel .carousel-img2 {
+  height: 250px;
+  width: 376px;
+  background-image: url(../media/img-prod19.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: relative; }
+
+main .carousel .carousel-img3 {
+  height: 250px;
+  width: 376px;
+  background-image: url(../media/img-prod3.jpg);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: auto;
+  position: relative; }
+
+.container__home {
   width: fit-content;
   position: fixed;
   top: 71%;
@@ -90,14 +125,14 @@ main .container__home {
   right: 0;
   margin: auto;
   text-align: center; }
-  main .container__home .container__home--title {
+  .container__home .container__home--title {
     color: white;
     font-family: "Handlee", cursive;
     font-style: normal;
     font-weight: normal;
     text-align: center;
     text-decoration: underline; }
-  main .container__home .container__home--button {
+  .container__home .container__home--button {
     background-color: #296b3c;
     border: 1px solid #296b3c;
     border-radius: 0.6em;
@@ -108,12 +143,12 @@ main .container__home {
     text-align: center;
     width: fit-content;
     padding: 0.2em; }
-    main .container__home .container__home--button:hover {
+    .container__home .container__home--button:hover {
       background: rgba(255, 255, 255, 0.7);
       border: 1px solid #3b9655; }
-    main .container__home .container__home--button .cta {
+    .container__home .container__home--button .cta {
       color: white; }
-      main .container__home .container__home--button .cta:hover {
+      .container__home .container__home--button .cta:hover {
         color: #3b9655; }
 
 /* PRODUITS DE SALLE DE BAINS */
@@ -440,6 +475,13 @@ main .contact .container__home--buttonWhatsapp {
   transition: all 0.8s;
   cursor: pointer; }
 
+main .contact .container__boutique--card-title {
+  text-align: left;
+  margin: 0;
+  font-family: "Comfortaa", cursive;
+  font-style: normal;
+  font-weight: lighter; }
+
 main .contact .container__home--buttonModal {
   background-color: rgba(255, 255, 255, 0.7);
   border: 1px solid #3b9655;
@@ -454,8 +496,7 @@ main .contact .container__home--buttonModal {
   width: fit-content;
   padding: 0.2em;
   transition: all 0.8s;
-  cursor: pointer;
-  margin-left: 1em; }
+  cursor: pointer; }
   main .contact .container__home--buttonModal:hover {
     background: #296b3c;
     border: 1px solid #296b3c;
@@ -471,9 +512,11 @@ main .container__internal .container__internal--title {
   text-align: center; }
 
 main .container__internal .grid {
+  height: 100vh;
+  border: solid red;
   display: grid;
-  grid-template-columns: 2fr;
-  grid-template-rows: 2fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-column-gap: 50px;
   grid-row-gap: 15px;
   grid-template-areas: "container__internal--videos1 container__internal--videos2" "container__internal--videos3 container__internal--videos4"; }
@@ -485,6 +528,31 @@ main .container__internal .grid {
     grid-area: "video3"; }
   main .container__internal .grid .container__internal--videos4 {
     grid-area: "video4"; }
+
+main .container__panier--tile {
+  color: white;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding: 1.5em 0 1em 0;
+  text-align: center;
+  font-family: "Comfortaa", cursive;
+  font-size: 1.3rem;
+  font-style: italic;
+  font-weight: normal; }
+
+main .cart {
+  text-align: center;
+  margin: 0 10em; }
+  main .cart .cart__header {
+    font-family: "Comfortaa", cursive;
+    font-style: normal;
+    font-weight: 300; }
+  main .cart .cart__body {
+    border-top: white;
+    border-bottom: white;
+    font-family: "Comfortaa", cursive;
+    font-style: normal;
+    font-weight: 300; }
 
 footer {
   width: 100%;
@@ -528,6 +596,32 @@ footer {
       footer div form .container__home--button:hover {
         background: #296b3c;
         border: 1px solid #296b3c; }
+    footer div form .container__boutique--card-title {
+      text-align: left;
+      margin: 0;
+      font-family: "Comfortaa", cursive;
+      font-style: normal;
+      font-weight: lighter; }
+    footer div form .container__home--buttonModal {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 1px solid #3b9655;
+      color: #3b9655 !important;
+      border-radius: 0.6em;
+      font-family: "Handlee", cursive;
+      font-style: normal;
+      font-size: 1.2rem;
+      font-weight: lighter;
+      text-align: center;
+      text-decoration-line: none;
+      width: fit-content;
+      padding: 0.2em;
+      transition: all 0.8s;
+      cursor: pointer; }
+      footer div form .container__home--buttonModal:hover {
+        background: #296b3c;
+        border: 1px solid #296b3c;
+        color: white !important;
+        text-decoration-line: none; }
   footer div .social-media__links ul li {
     display: inline-block; }
     footer div .social-media__links ul li a #smfacebook, footer div .social-media__links ul li a #sminstagram {

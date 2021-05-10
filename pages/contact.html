@@ -8,6 +8,8 @@
 	<title>Pour un monde + conscient</title>
 	<!------ICONIFY-------->
 	<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+	<!------ICON-SHORT-------->
+	<link rel="icon" href="./media/favicon.png" type="png" sizes="16X16">
 	<!------BOOTSTRAP-------->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	<!------MI CSS-------->
@@ -64,10 +66,10 @@
 										</a>
 
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item" href="../pages/salle-de-bains.html">Salle de Bains</a>
-										<a class="dropdown-item" href="../pages/cuisine.html">Cuisine</a>
-										<a class="dropdown-item" href="../pages/maison.html">Maison</a>
-										<a class="dropdown-item" href="../pages/bebe-et-femmes.html">Bébés et Femmes</a>
+										<a class="nav-link dropdown-item" href="../pages/salle-de-bains.html">Salle de Bains</a>
+										<a class="nav-link dropdown-item" href="../pages/cuisine.html">Cuisine</a>
+										<a class="nav-link dropdown-item" href="../pages/maison.html">Maison</a>
+										<a class="nav-link dropdown-item" href="../pages/bebe-et-femmes.html">Bébés et Femmes</a>
 										</div>
 
 									</li>
@@ -79,6 +81,12 @@
 
 									<li class="nav-item">
 										<a class="nav-link" href="../pages/contact.html">Contact</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link" href="../pages/panier.html">
+											<img src="../media/icon-panier.png" width="30" height="30" alt="panier">
+										</a>
 									</li>
 
 								</ul>
@@ -230,13 +238,13 @@
 
 						<!-- Aca en esta parte en la pagina no reacciona el valor digamos-->
 						<div class="form-group newsletter">
-							<button type="button" class="container__home--button" type="reset"  value="Effacer le formulaire" required>
-								Effacer le formulaire
-							</button>
-							<button type="button" class="container__home--button" type="submit" value="Envoyer un avis" required>
-								Envoyer un avis
-							</button>
-							
+							<form action="">
+								<input class="container__home--button" type="reset"  value="Effacer le formulaire" required>
+								</input>
+								<input class="container__home--button" type="submit" value="Envoyer un avis" required>
+								</input>
+							</form>
+
 						</div>
 
 					</div>

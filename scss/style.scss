@@ -1,4 +1,5 @@
 // IMPORTS
+@import "carousel";
 @import "colors";
 @import "fonts";
 @import "map";
@@ -6,7 +7,6 @@
 
 // RESET
 *  {
-
     margin: 0;
     padding: 0;
     color: inherit;
@@ -26,7 +26,6 @@ body {
     }
     position: relative;
 }
-
 .homeBody {
     background: {
         attachment: fixed;
@@ -127,8 +126,36 @@ main {
 }
 
 // INDEX
-
+// quiero que el carrusel me quede a la izquierda, para que que no me tape la foto del centro, pero cuando le pongo el float left, me quedan bien las imagenes pero me esta armando un margena la izquierda que no se que onda, no lo veo para eliminarlo, porque de esa forma podria moverlo un poquito a la izquierda y quedaria mejor.
 main{
+    .carousel {
+        .carousel__title {
+            color: $color-titles;
+            padding: 1.5em 0 1em 0;
+            text-align: left;
+            font: {
+                family: $font-secondary;
+                style: italic;
+                weight: normal;
+                }
+            }
+            // MAPA Y EACH
+            @each $produit, $img in $carousel {
+                .#{$produit} {
+                    height: 250px;
+                    width: 376px;
+                    background: {
+                        image: $img;
+                        position: left;
+                        repeat: no-repeat;
+                        size: auto;
+                        }
+                        position: relative;
+                }
+            }
+        }
+    }
+    
     .container__home {
             width: fit-content;
             position:fixed;
@@ -176,7 +203,6 @@ main{
                                     }
                         }
                     }
-                }
 
 // BOUTIQUE
 
@@ -426,6 +452,7 @@ main{
             }
         }
     }
+    // nose que onda solo en la seccion de contacto me esta tomando el mismo escrito, titulos del modal del whatsapp con el del footer, solo en contacto no entiendo
     .contact{
         .container__form--title {
             color: $color-titles;
@@ -462,34 +489,42 @@ main{
             transition: all 0.8s;
             cursor: pointer;
         }
-        .container__home--buttonModal {
-                background-color: $bg-color-hd-ft ;
-                border: 1px solid $color-principal ;
-                color: $color-principal!important;
-                border-radius: 0.6em;
-                font: {
-                    family: $font-principal;
-                    style: normal;
-                    size: $font-general;
-                    weight: lighter;
-                }
-                text: {
-                align: center;
-                decoration-line: none;
-                }
-                width: fit-content;
-                padding: 0.2em;
-                transition: all 0.8s;
-                cursor: pointer;
-                margin-left: 1em;
-
-                &:hover {
-                    background:$bg-color-btt;
-                    border: 1px solid $bg-color-btt ;
-                    color: $color-titles!important;
-                    text-decoration-line: none;
-                }
+        .container__boutique--card-title {
+            text-align: left;
+            margin: 0;
+            font: {
+                family: $font-secondary;
+                style: normal;
+                weight: lighter;
             }
+        }
+        .container__home--buttonModal {
+            background-color: $bg-color-hd-ft ;
+            border: 1px solid $color-principal ;
+            color: $color-principal!important;
+            border-radius: 0.6em;
+            font: {
+                family: $font-principal;
+                style: normal;
+                size: $font-general;
+                weight: lighter;
+            }
+            text: {
+            align: center;
+            decoration-line: none;
+            }
+            width: fit-content;
+            padding: 0.2em;
+            transition: all 0.8s;
+            cursor: pointer;
+
+            &:hover {
+                background:$bg-color-btt;
+                border: 1px solid $bg-color-btt ;
+                color: $color-titles!important;
+                text-decoration-line: none;
+            }
+        }
     }
 }
 
@@ -509,9 +544,11 @@ main{
             }
             // nose que onda aca no me esta tomando los gaps, y el grid realmente
             .grid {
+                height: 100vh;
+                border: solid red;
                 display: grid;
-                grid-template-columns: 2fr;
-                grid-template-rows: 2fr;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
                 grid-column-gap: 50px;
                 grid-row-gap: 15px;
                 grid-template-areas: 
@@ -534,6 +571,43 @@ main{
         }
     }
 
+// PANIER
+
+main {
+        .container__panier--tile {
+            color: $color-titles;
+            margin-top: 1em;
+            margin-bottom: 2em;
+            padding: 1.5em 0 1em 0;
+            text-align: center;
+            font: {
+                family: $font-secondary;
+                size: $font-h4;
+                style: italic;
+                weight: normal;
+            }
+        }
+        .cart {
+            text-align: center;
+            margin: 0 10em;
+            .cart__header {
+                font: {
+                    family: $font-secondary;
+                    style: normal;
+                    weight: 300;
+                }
+            }
+            .cart__body {
+                border-top: $color-titles;
+                border-bottom: $color-titles;
+                font: {
+                    family: $font-secondary;
+                    style: normal;
+                    weight: 300;
+                }
+        }
+    }
+}
 
 // FOOTER
 
@@ -602,6 +676,42 @@ footer {
                         border: 1px solid $bg-color-btt ;
                     }
             }
+            .container__boutique--card-title {
+                text-align: left;
+                margin: 0;
+                font: {
+                    family: $font-secondary;
+                    style: normal;
+                    weight: lighter;
+                }
+            }
+            .container__home--buttonModal {
+                background-color: $bg-color-hd-ft ;
+                border: 1px solid $color-principal ;
+                color: $color-principal!important;
+                border-radius: 0.6em;
+                font: {
+                    family: $font-principal;
+                    style: normal;
+                    size: $font-general;
+                    weight: lighter;
+                }
+                text: {
+                align: center;
+                decoration-line: none;
+                }
+                width: fit-content;
+                padding: 0.2em;
+                transition: all 0.8s;
+                cursor: pointer;
+
+                &:hover {
+                    background:$bg-color-btt;
+                    border: 1px solid $bg-color-btt ;
+                    color: $color-titles!important;
+                    text-decoration-line: none;
+                }
+            }
         }
                 .social-media__links  {
                     ul{
@@ -621,7 +731,7 @@ footer {
     }
 
 // MEDIA QUERY
-
+// Aca me podes ayudar con el footer y decirme si estan bien las medidas del media query
 @media (min-width: 280px) and (max-width: 768px) {
     @mixin sizes ($width, $height-ftr) { 
         width: $width;

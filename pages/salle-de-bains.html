@@ -9,6 +9,8 @@
 	<title>Pour un monde + conscient</title>
 	<!------ICONIFY-------->
 	<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+	<!------ICON-SHORT-------->
+	<link rel="icon" href="./media/favicon.png" type="png" sizes="16X16">
 	<!------ANIMATION-------->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<!------BOOTSTRAP-------->
@@ -65,10 +67,10 @@
 										</a>
 
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item" href="../pages/salle-de-bains.html">Salle de Bains</a>
-										<a class="dropdown-item" href="../pages/cuisine.html">Cuisine</a>
-										<a class="dropdown-item" href="../pages/maison.html">Maison</a>
-										<a class="dropdown-item" href="../pages/bebe-et-femmes.html">Bébés et Femmes</a>
+										<a class="nav-link dropdown-item" href="../pages/salle-de-bains.html">Salle de Bains</a>
+										<a class="nav-link dropdown-item" href="../pages/cuisine.html">Cuisine</a>
+										<a class="nav-link dropdown-item" href="../pages/maison.html">Maison</a>
+										<a class="nav-link dropdown-item" href="../pages/bebe-et-femmes.html">Bébés et Femmes</a>
 										</div>
 
 									</li>
@@ -80,6 +82,12 @@
 
 									<li class="nav-item">
 										<a class="nav-link" href="../pages/contact.html">Contact</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link" href="../pages/panier.html">
+											<img src="../media/icon-panier.png" width="30" height="30" alt="panier">
+										</a>
 									</li>
 
 								</ul>
@@ -114,10 +122,10 @@
 							<!-- IMAGE PRODUCT 1 -->
 							<div class="card-body">
 								<!-- TITLE PRODUCT 1 -->
-								<h4 class="container__boutique--card-title">Brosse à dents</h4>
+								<h4 class="container__boutique--card-title">Brosse à dents (7.50€)</h4>
 								<!-- BUTTON PRODUCT 1 -->
 								<button type="button" class="container__home--button" required>
-									<a class="card-btn" href="#">Ajouter au panier</a>
+									<a class="card-btn" href="../pages/panier.html">Ajouter au panier</a>
 								</button>
 							</div>
 						</div>
@@ -127,10 +135,10 @@
 							<!-- IMAGE PRODUCT 2 -->
 							<div class="card-body">
 								<!-- TITLE PRODUCT 2 -->
-								<h4 class="container__boutique--card-title">Savon de main</h4>
+								<h4 class="container__boutique--card-title">Savon de main (4.80€)</h4>
 								<!-- BUTTON PRODUCT 2 -->
 								<button type="button" class="container__home--button" required>
-									<a class="card-btn" href="#">Ajouter au panier</a>
+									<a class="card-btn" href="../pages/panier.html">Ajouter au panier</a>
 								</button>
 							</div>
 						</div>
@@ -140,10 +148,12 @@
 							<!-- IMAGE PRODUCT 3 -->
 							<div class="card-body">
 								<!-- TITLE PRODUCT 3 -->
-								<h4 class="container__boutique--card-title">Gel de douche</h4>
+								<h4 class="container__boutique--card-title">Gel de douche (9.25€)
+									<span class="badge badge-secondary"> Nouveau </span>
+								</h4>
 								<!-- BUTTON PRODUCT 3 -->
 								<button type="button" class="container__home--button" required>
-									<a class="card-btn" href="#">Ajouter au panier</a>
+									<a class="card-btn" href="../pages/panier.html">Ajouter au panier</a>
 								</button>
 							</div>
 						</div>
@@ -153,10 +163,10 @@
 							<!-- IMAGE PRODUCT 4 -->
 							<div class="card-body">
 								<!-- TITLE PRODUCT 4 -->
-								<h4 class="container__boutique--card-title">Éponge de luffa</h4>
+								<h4 class="container__boutique--card-title">Éponge de luffa (5.50€)</h4>
 								<!-- BUTTON PRODUCT 4 -->
 								<button type="button" class="container__home--button" required>
-									<a class="card-btn" href="#">Ajouter au panier</a>
+									<a class="card-btn" href="../pages/panier.html">Ajouter au panier</a>
 								</button>
 							</div>
 						</div>
@@ -166,10 +176,10 @@
 							<!-- IMAGE PRODUCT 5 -->
 							<div class="card-body">
 								<!-- TITLE PRODUCT 5 -->
-								<h4 class="container__boutique--card-title">Shampooing</h4>
+								<h4 class="container__boutique--card-title">Shampooing (10.50€)</h4>
 								<!-- BUTTON PRODUCT 5 -->
 								<button type="button" class="container__home--button" required>
-									<a class="card-btn" href="#">Ajouter au panier</a>
+									<a class="card-btn" href="../pages/panier.html">Ajouter au panier</a>
 								</button>
 							</div>
 						</div>
@@ -179,10 +189,10 @@
 							<!-- IMAGE PRODUCT 6 -->
 							<div class="card-body">
 								<!-- TITLE PRODUCT 6 -->
-								<h4 class="container__boutique--card-title">Après shampooing</h4>
+								<h4 class="container__boutique--card-title">Après shampooing (12.80€)</h4>
 								<!-- BUTTON PRODUCT 6 -->
 								<button type="button" class="container__home--button" required>
-									<a class="card-btn" href="#">Ajouter au panier</a>
+									<a class="card-btn" href="../pages/panier.html">Ajouter au panier</a>
 								</button>
 							</div>
 
@@ -217,27 +227,27 @@
 							<div class="modal" id="myModal">
 								<div class="modal-dialog">
 									<div class="modal-content">
-
+	
 										<!-- Modal Header -->
-										<div class="modal-header">
+										<div class="modal-header container__boutique--card-title">
 										<h4 class="modal-title">Abonnement</h4>
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 										</div>
-
+	
 										<!-- Modal body -->
-										<div class="modal-body">
+										<div class="modal-body container__boutique--card-title">
 										Vous êtes maintenant abboné
 										</div>
-
+	
 										<!-- Modal footer -->
-										<div class="modal-footer">
-										<button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+										<div class="modal-footer container__boutique--card-title">
+										<button type="button" class="container__home--buttonModal" data-dismiss="modal">Fermer</button>
 										</div>
-
+	
 									</div>
-
+	
 								</div>
-
+	
 							</div>
 
 						</div>

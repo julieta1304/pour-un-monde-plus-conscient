@@ -9,6 +9,8 @@
 	<title>Pour un monde + conscient</title>
 	<!------ICONIFY-------->
 	<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+	<!------ICON-SHORT-------->
+	<link rel="icon" href="./media/favicon.png" type="png" sizes="16X16">
 	<!------ANIMATION-------->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<!------BOOTSTRAP-------->
@@ -65,10 +67,10 @@
 										</a>
 
 										<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-										<a class="dropdown-item" href="../pages/salle-de-bains.html">Salle de Bains</a>
-										<a class="dropdown-item" href="../pages/cuisine.html">Cuisine</a>
-										<a class="dropdown-item" href="../pages/maison.html">Maison</a>
-										<a class="dropdown-item" href="../pages/bebe-et-femmes.html">Bébés et Femmes</a>
+										<a class="nav-link dropdown-item" href="../pages/salle-de-bains.html">Salle de Bains</a>
+										<a class="nav-link dropdown-item" href="../pages/cuisine.html">Cuisine</a>
+										<a class="nav-link dropdown-item" href="../pages/maison.html">Maison</a>
+										<a class="nav-link dropdown-item" href="../pages/bebe-et-femmes.html">Bébés et Femmes</a>
 										</div>
 
 									</li>
@@ -80,6 +82,12 @@
 
 									<li class="nav-item">
 										<a class="nav-link" href="../pages/contact.html">Contact</a>
+									</li>
+
+									<li class="nav-item">
+										<a class="nav-link" href="../pages/panier.html">
+											<img src="../media/icon-panier.png" width="30" height="30" alt="panier">
+										</a>
 									</li>
 
 								</ul>
@@ -114,10 +122,10 @@
 						<!-- IMAGE PRODUCT 13 -->
 						<div class="card-body">
 							<!-- TITLE PRODUCT 13 -->
-							<h4 class="container__boutique--card-title">Sac réutilisables</h4>
+							<h4 class="container__boutique--card-title">Sac réutilisables (17.40€)</h4>
 							<!-- BUTTON PRODUCT 13 -->
 							<button type="button" class="container__home--button" required>
-								<a class="card-btn" href="#">Ajouter au panier</a>
+								<a class="card-btn" href="../pages/panier.html">Ajouter au panier</a>
 							</button>
 						</div>
 					</div>
@@ -127,10 +135,12 @@
 						<!-- IMAGE PRODUCT 14 -->
 						<div class="card-body">
 							<!-- TITLE PRODUCT 14 -->
-							<h4 class="container__boutique--card-title">Les gargouilles</h4>
+							<h4 class="container__boutique--card-title">Les gargouilles (35€)
+								<span class="badge badge-secondary"> Nouveau </span>
+							</h4>
 							<!-- BUTTON PRODUCT 14 -->
 							<button type="button" class="container__home--button" required>
-								<a class="card-btn" href="#">Ajouter au panier</a>
+								<a class="card-btn" href="../pages/panier.html">Ajouter au panier</a>
 							</button>
 						</div>
 					</div>
@@ -140,10 +150,10 @@
 						<!-- IMAGE PRODUCT 15 -->
 						<div class="card-body">
 							<!-- TITLE PRODUCT 15 -->
-							<h4 class="container__boutique--card-title">Sprays différentes surfaces</h4>
+							<h4 class="container__boutique--card-title">Sprays nettoyants (28.50€)</h4>
 							<!-- BUTTON PRODUCT 15 -->
 							<button type="button" class="container__home--button" required>
-								<a class="card-btn" href="#">Ajouter au panier</a>
+								<a class="card-btn" href="../pages/panier.html">Ajouter au panier</a>
 							</button>
 						</div>
 
@@ -178,27 +188,27 @@
 							<div class="modal" id="myModal">
 								<div class="modal-dialog">
 									<div class="modal-content">
-
+	
 										<!-- Modal Header -->
-										<div class="modal-header">
+										<div class="modal-header container__boutique--card-title">
 										<h4 class="modal-title">Abonnement</h4>
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 										</div>
-
+	
 										<!-- Modal body -->
-										<div class="modal-body">
+										<div class="modal-body container__boutique--card-title">
 										Vous êtes maintenant abboné
 										</div>
-
+	
 										<!-- Modal footer -->
-										<div class="modal-footer">
-										<button type="button" class="btn btn-danger" data-dismiss="modal">Fermer</button>
+										<div class="modal-footer container__boutique--card-title">
+										<button type="button" class="container__home--buttonModal" data-dismiss="modal">Fermer</button>
 										</div>
-
+	
 									</div>
-
+	
 								</div>
-
+	
 							</div>
 
 						</div>

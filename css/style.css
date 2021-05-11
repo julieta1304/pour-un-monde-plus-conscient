@@ -55,12 +55,12 @@ header {
     display: flex; }
     header .nav-title #logo {
       color: #3b9655;
-      font-size: 1.6em; }
+      font-size: 1.6rem; }
     header .nav-title .nav-h1 {
       padding-left: 0.2em;
       color: #3b9655;
-      text-decoration-line: none;
       text-align: left;
+      text-decoration-line: none;
       font-family: "Handlee", cursive;
       font-style: italic;
       font-weight: 200; }
@@ -74,7 +74,7 @@ header {
       font-family: "Handlee", cursive;
       font-size: 1.3rem;
       font-style: normal;
-      font-weight: 500; }
+      font-weight: normal; }
       header .nav .nav-link:hover {
         text-decoration-line: underline;
         color: black; }
@@ -82,57 +82,52 @@ header {
 main {
   height: 1110px; }
 
-main .carousel .carousel__title {
-  color: white;
-  padding: 1.5em 0 1em 0;
-  text-align: left;
-  font-family: "Comfortaa", cursive;
-  font-style: italic;
-  font-weight: normal; }
+main .carousel {
+  text-align: center; }
+  main .carousel .carousel__title {
+    color: white;
+    padding: 1.5em 0 1em 0;
+    font-family: "Comfortaa", cursive;
+    font-style: italic;
+    font-weight: normal; }
+  main .carousel .carousel-img1 {
+    text-align: center;
+    height: 250px;
+    width: 376px;
+    background-image: url(../media/img-prod14.jpg);
+    background-position: center;
+    background-repeat: no-repeat; }
+  main .carousel .carousel-img2 {
+    text-align: center;
+    height: 250px;
+    width: 376px;
+    background-image: url(../media/img-prod19.jpg);
+    background-position: center;
+    background-repeat: no-repeat; }
+  main .carousel .carousel-img3 {
+    text-align: center;
+    height: 250px;
+    width: 376px;
+    background-image: url(../media/img-prod3.png);
+    background-position: center;
+    background-repeat: no-repeat; }
 
-main .carousel .carousel-img1 {
-  height: 250px;
-  width: 376px;
-  background-image: url(../media/img-prod14.jpg);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: auto;
-  position: relative; }
-
-main .carousel .carousel-img2 {
-  height: 250px;
-  width: 376px;
-  background-image: url(../media/img-prod19.jpg);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: auto;
-  position: relative; }
-
-main .carousel .carousel-img3 {
-  height: 250px;
-  width: 376px;
-  background-image: url(../media/img-prod3.jpg);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: auto;
-  position: relative; }
-
-.container__home {
+main .container__home {
   width: fit-content;
   position: fixed;
-  top: 71%;
+  top: 73%;
   left: 0;
   right: 0;
   margin: auto;
   text-align: center; }
-  .container__home .container__home--title {
+  main .container__home .container__home--title {
     color: white;
     font-family: "Handlee", cursive;
     font-style: normal;
     font-weight: normal;
     text-align: center;
     text-decoration: underline; }
-  .container__home .container__home--button {
+  main .container__home .container__home--button {
     background-color: #296b3c;
     border: 1px solid #296b3c;
     border-radius: 0.6em;
@@ -143,58 +138,58 @@ main .carousel .carousel-img3 {
     text-align: center;
     width: fit-content;
     padding: 0.2em; }
-    .container__home .container__home--button:hover {
+    main .container__home .container__home--button:hover {
       background: rgba(255, 255, 255, 0.7);
       border: 1px solid #3b9655; }
-    .container__home .container__home--button .cta {
+    main .container__home .container__home--button .cta {
       color: white; }
-      .container__home .container__home--button .cta:hover {
+      main .container__home .container__home--button .cta:hover {
         color: #3b9655; }
 
 /* PRODUITS DE SALLE DE BAINS */
 .img-prod1 {
-  height: 250px;
-  max-width: 376px;
-  background-image: url(../media/img-prod1.jpg);
+  height: auto;
+  max-width: 100%;
+  background-image: url(../media/img-prod1.png);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod2 {
-  height: 250px;
-  max-width: 376px;
-  background-image: url(../media/img-prod2.jpg);
+  height: auto;
+  max-width: 100%;
+  background-image: url(../media/img-prod2.png);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod3 {
-  height: 250px;
-  max-width: 376px;
-  background-image: url(../media/img-prod3.jpg);
+  height: auto;
+  max-width: 100%;
+  background-image: url(../media/img-prod3.png);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod4 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod4.png);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod5 {
-  height: 250px;
-  max-width: 376px;
-  background-image: url(../media/img-prod5.jpg);
+  height: auto;
+  max-width: 100%;
+  background-image: url(../media/img-prod5.png);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod6 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod6.png);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -202,48 +197,48 @@ main .carousel .carousel-img3 {
 
 /* PRODUITS DE LA CUISINE */
 .img-prod7 {
-  height: 250px;
-  max-width: 376px;
-  background-image: url(../media/img-prod7.jpg);
+  height: auto;
+  max-width: 100%;
+  background-image: url(../media/img-prod7.png);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod8 {
-  height: 250px;
-  max-width: 376px;
-  background-image: url(../media/img-prod8.jpg);
+  height: auto;
+  max-width: 100%;
+  background-image: url(../media/img-prod8.png);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod9 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod9.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod10 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod10.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod11 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod11.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod12 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod12.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -251,24 +246,24 @@ main .carousel .carousel-img3 {
 
 /* PRODUITS DE LA MAISON */
 .img-prod13 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod13.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod14 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod14.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod15 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod15.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
@@ -276,49 +271,49 @@ main .carousel .carousel-img3 {
 
 /* PRODUITS DE BEBES ET FEMMES */
 .img-prod16 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod16.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod17 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod17.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod18 {
-  height: 250px;
-  max-width: 376px;
-  background-image: url(../media/img-prod18.jpg);
+  height: auto;
+  max-width: 100%;
+  background-image: url(../media/img-prod18.png);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod19 {
-  height: 250px;
-  max-width: 376px;
+  height: auto;
+  max-width: 100%;
   background-image: url(../media/img-prod19.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod20 {
-  height: 250px;
-  max-width: 376px;
-  background-image: url(../media/img-prod20.jpg);
+  height: auto;
+  max-width: 100%;
+  background-image: url(../media/img-prod20.png);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
 
 .img-prod21 {
-  height: 250px;
-  max-width: 376px;
-  background-image: url(../media/img-prod21.jpg);
+  height: auto;
+  max-width: 100%;
+  background-image: url(../media/img-prod21.png);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
@@ -342,7 +337,7 @@ main .container .container__boutique {
 
 main .container .container__boutique--card-title {
   text-align: left;
-  margin: 0;
+  margin: 1;
   font-family: "Comfortaa", cursive;
   font-style: normal;
   font-weight: lighter; }
@@ -355,6 +350,7 @@ main .container .container__home--button {
   font-style: normal;
   font-size: 1.2rem;
   font-weight: lighter;
+  margin-top: 2;
   float: left;
   width: fit-content;
   padding: 0.2em;
@@ -383,14 +379,11 @@ main .container__np--text {
   color: #4c1130;
   text-align: justify;
   line-height: 2;
-  margin: 0 7em;
   font-family: "Comfortaa", cursive;
   font-style: normal;
   font-weight: normal; }
   main .container__np--text .container__np--sign {
     color: #4c1130;
-    line-height: 3;
-    margin: 3em 0 0 15em;
     font-family: "Comfortaa", cursive;
     font-size: 1.2rem !important;
     font-style: italic;
@@ -422,8 +415,6 @@ main .container__form .newsletter {
   font-style: normal;
   font-weight: 300;
   margin-top: 1em; }
-  main .container__form .newsletter .newsletter1 {
-    margin-left: 2em; }
   main .container__form .newsletter .container__home--button {
     background-color: rgba(255, 255, 255, 0.7);
     border: 1px solid #3b9655;
@@ -512,13 +503,14 @@ main .container__internal .container__internal--title {
   text-align: center; }
 
 main .container__internal .grid {
-  height: 100vh;
-  border: solid red;
+  text-align: center;
   display: grid;
+  width: 100%;
+  height: auto;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-column-gap: 50px;
-  grid-row-gap: 15px;
+  grid-column-gap: 20px;
+  grid-row-gap: 35px;
   grid-template-areas: "container__internal--videos1 container__internal--videos2" "container__internal--videos3 container__internal--videos4"; }
   main .container__internal .grid .container__internal--videos1 {
     grid-area: "video1"; }
@@ -529,7 +521,7 @@ main .container__internal .grid {
   main .container__internal .grid .container__internal--videos4 {
     grid-area: "video4"; }
 
-main .container__panier--tile {
+main .container__panier--title {
   color: white;
   margin-top: 1em;
   margin-bottom: 2em;
@@ -540,19 +532,17 @@ main .container__panier--tile {
   font-style: italic;
   font-weight: normal; }
 
-main .cart {
-  text-align: center;
-  margin: 0 10em; }
-  main .cart .cart__header {
-    font-family: "Comfortaa", cursive;
-    font-style: normal;
-    font-weight: 300; }
-  main .cart .cart__body {
-    border-top: white;
-    border-bottom: white;
-    font-family: "Comfortaa", cursive;
-    font-style: normal;
-    font-weight: 300; }
+main .cart .cart__header {
+  font-family: "Comfortaa", cursive;
+  font-style: normal;
+  font-weight: 300; }
+
+main .cart .cart__body {
+  border-top: white;
+  border-bottom: white;
+  font-family: "Comfortaa", cursive;
+  font-style: normal;
+  font-weight: 300; }
 
 footer {
   width: 100%;
@@ -567,10 +557,9 @@ footer {
     font-family: "Handlee", cursive;
     font-weight: lighter;
     text-decoration-line: underline;
-    margin-left: 1em;
-    margin-right: 2em; }
+    margin: auto; }
   footer div form {
-    margin: 0em 2em; }
+    margin: auto; }
     footer div form #adresse__e-mail {
       font-family: "Handlee", cursive;
       font-size: 1.1rem;
@@ -578,7 +567,7 @@ footer {
       font-weight: lighter;
       text-align: left;
       line-height: normal;
-      padding: 0em 0.3em 0em 0.3em; }
+      padding: 0em 0.3em; }
     footer div form .container__home--button {
       background-color: rgba(255, 255, 255, 0.7);
       border: 1px solid #3b9655;
@@ -627,19 +616,74 @@ footer {
     footer div .social-media__links ul li a #smfacebook, footer div .social-media__links ul li a #sminstagram {
       color: black;
       font-size: 2rem;
-      margin-right: 1.3em; }
+      margin-right: 0.4em; }
 
-@media (min-width: 280px) and (max-width: 768px) {
+@media (max-width: 768px) {
   footer {
     width: 100%;
     height: 85px;
     display: none;
     position: absolute;
-    bottom: 0; }
-  .container__boutique--card {
+    bottom: 0;
+    padding-top: 0.7em; }
+  .carousel {
     text-align: center; }
-  .card-body {
-    text-align: center; } }
+    .carousel .carousel__title {
+      color: white;
+      padding: 1.5em 0 1em 0;
+      text-align: center;
+      font-family: "Comfortaa", cursive;
+      font-style: italic;
+      font-weight: normal; }
+    .carousel .carousel-img1 {
+      height: auto;
+      width: 100%;
+      background-image: url(../media/img-prod14.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative; }
+    .carousel .carousel-img2 {
+      height: auto;
+      width: 100%;
+      background-image: url(../media/img-prod19.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative; }
+    .carousel .carousel-img3 {
+      height: auto;
+      width: 100%;
+      background-image: url(../media/img-prod3.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative; }
+  main .container__internal .container__internal--title {
+    padding: 1.5em 0 1em 0;
+    color: white;
+    font-family: "Comfortaa", cursive;
+    font-style: italic;
+    font-weight: normal;
+    text-align: center; }
+  main .container__internal .grid {
+    text-align: center;
+    display: grid;
+    width: 100%;
+    height: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 35px;
+    grid-template-areas: "container__internal--videos1" "container__internal--videos2" "container__internal--videos3"  "container__internal--videos4"; }
+    main .container__internal .grid .container__internal--videos1 {
+      grid-area: "video1"; }
+    main .container__internal .grid .container__internal--videos2 {
+      grid-area: "video2"; }
+    main .container__internal .grid .container__internal--videos3 {
+      grid-area: "video3"; }
+    main .container__internal .grid .container__internal--videos4 {
+      grid-area: "video4"; } }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   footer {
@@ -647,22 +691,134 @@ footer {
     height: 85px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    position: absolute;
+    justify-content: space-around;
+    position: relative;
     bottom: 0;
     padding-top: 0.7em; }
-  .container__boutique--card {
+  .carousel {
     text-align: center; }
+    .carousel .carousel__title {
+      color: white;
+      padding: 1.5em 0 1em 0;
+      text-align: center;
+      font-family: "Comfortaa", cursive;
+      font-style: italic;
+      font-weight: normal; }
+    .carousel .carousel-img1 {
+      height: auto;
+      width: 100%;
+      background-image: url(../media/img-prod14.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative; }
+    .carousel .carousel-img2 {
+      height: auto;
+      width: 100%;
+      background-image: url(../media/img-prod19.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative; }
+    .carousel .carousel-img3 {
+      height: auto;
+      width: 100%;
+      background-image: url(../media/img-prod3.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative; }
+  .container__boutique--card {
+    text-align: left; }
   .card-body {
-    text-align: center; } }
+    text-align: center; }
+  main .container__form .container__form--title {
+    color: white;
+    margin-top: 1em;
+    padding: 1.5em 0 1em 0;
+    text-align: center;
+    font-family: "Comfortaa", cursive;
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: normal; }
+  main .container__form label {
+    font-family: "Comfortaa", cursive;
+    font-style: normal;
+    font-weight: 300; }
+  main .container__form .form-group .form-control {
+    font-family: "Comfortaa", cursive;
+    font-style: normal;
+    font-weight: 300;
+    margin: 1em 0em; }
+  main .container__form .newsletter {
+    font-family: "Comfortaa", cursive;
+    font-style: normal;
+    font-weight: 300;
+    margin-top: 1em; }
+    main .container__form .newsletter .newsletter1 {
+      margin-top: 1 !important; }
+    main .container__form .newsletter .container__home--button {
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 1px solid #3b9655;
+      color: #3b9655 !important;
+      border-radius: 0.6em;
+      font-family: "Handlee", cursive;
+      font-style: normal;
+      font-size: 1.2rem;
+      font-weight: lighter;
+      text-align: center;
+      text-decoration-line: none;
+      width: fit-content;
+      padding: 0.2em;
+      transition: all 0.8s;
+      cursor: pointer; }
+      main .container__form .newsletter .container__home--button:hover {
+        background: #296b3c;
+        border: 1px solid #296b3c;
+        color: white !important;
+        text-decoration-line: none; } }
 
-@media (min-width: 1024px) and (max-width: 1920px) {
+@media (min-width: 1024px) and (max-width: 1680px) {
   footer {
     width: 100%;
     height: 85px;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    position: absolute;
+    justify-content: space-around;
+    position: relative;
     bottom: 0;
-    padding-top: 0.7em; } }
+    padding-top: 0.7em; }
+  .carousel .carousel__title {
+    color: white;
+    padding: 1.5em 0 1em 0;
+    text-align: center;
+    font-family: "Comfortaa", cursive;
+    font-style: italic;
+    font-weight: normal; }
+  .carousel .carousel-img1 {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    background-image: url(../media/img-prod14.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; }
+  .carousel .carousel-img2 {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    background-image: url(../media/img-prod19.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; }
+  .carousel .carousel-img3 {
+    height: auto;
+    width: 100%;
+    text-align: center;
+    background-image: url(../media/img-prod3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; } }

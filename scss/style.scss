@@ -1,9 +1,12 @@
 // IMPORTS
+
+@import "breakpoints";
 @import "carousel";
 @import "colors";
 @import "fonts";
 @import "map";
 @import "vars";
+
 
 // RESET
 *  {
@@ -78,15 +81,17 @@ header {
 
         #logo {
             color: $color-principal;  
-            font-size: 1.6em;
+            font-size: $font-size-logo;
         }
 
             
             .nav-h1 {
                 padding-left: 0.2em;
                 color: $color-principal ;
-                text-decoration-line: none;
-                text-align: left;
+                text: {
+                    align: left;
+                    decoration-line: none;
+                }
                 font: {
                     family: $font-principal;
                     style: italic;
@@ -108,7 +113,7 @@ header {
             family: $font-principal;
             size: $font-h4 ;
             style: normal;
-            weight: 500;
+            weight: normal;
         }
         &:hover {
             text-decoration-line:underline ;
@@ -126,13 +131,13 @@ main {
 }
 
 // INDEX
-// quiero que el carrusel me quede a la izquierda, para que que no me tape la foto del centro, pero cuando le pongo el float left, me quedan bien las imagenes pero me esta armando un margena la izquierda que no se que onda, no lo veo para eliminarlo, porque de esa forma podria moverlo un poquito a la izquierda y quedaria mejor.
+// quiero que el carrusel me quede a la izquierda, para que que no me tape la foto del centro, pero cuando le pongo el float left, me quedan bien las imagenes pero me esta armando un margen a la izquierda que no se que onda, no lo veo para eliminarlo, porque de esa forma podria moverlo un poquito a la izquierda y quedaria mejor.
 main{
     .carousel {
+        text-align: center;
         .carousel__title {
             color: $color-titles;
-            padding: 1.5em 0 1em 0;
-            text-align: left;
+            padding: $padding-titles;
             font: {
                 family: $font-secondary;
                 style: italic;
@@ -142,24 +147,22 @@ main{
             // MAPA Y EACH
             @each $produit, $img in $carousel {
                 .#{$produit} {
-                    height: 250px;
-                    width: 376px;
+                    text-align: center;
+                    height: $sizeHeight-carousel;
+                    width: $sizeWidth-carousel;
                     background: {
                         image: $img;
-                        position: left;
+                        position: center;
                         repeat: no-repeat;
-                        size: auto;
                         }
-                        position: relative;
                 }
             }
         }
-    }
     
     .container__home {
             width: fit-content;
             position:fixed;
-            top: 71%;
+            top: 73%;
             left: 0;
             right: 0;
             margin: auto;
@@ -179,31 +182,31 @@ main{
                         }
 
                     .container__home--button {
-                                background-color: $bg-color-btt ;
-                                border: 1px solid $bg-color-btt ;
-                                border-radius: 0.6em;
+                                background-color: $bg-color-btt;
+                                border: 1px solid $bg-color-btt;
+                                border-radius: $borderRadius-btn;
 
                                 font: {
                                     family: $font-principal;
                                     style: normal;
                                     weight: lighter;
-                                    size: 1.5rem;
+                                    size: $font-size-btn;
                                 }
                                 text-align: center;
                                 width: fit-content;
-                                padding: 0.2em;
+                                padding: $padding-btn;
 
                                 &:hover {
-                                    background:$bg-color-hd-ft ;
-                                    border: 1px solid $color-principal ;
+                                    background:$bg-color-hd-ft;
+                                    border: 1px solid $color-principal;
                                 }
                                 .cta {
                                     color: $color-titles;
-                                    &:hover {color: $color-principal ;} 
+                                    &:hover {color: $color-principal;} 
                                     }
                         }
                     }
-
+                }
 // BOUTIQUE
 
 /* PRODUITS DE SALLE DE BAINS */
@@ -211,8 +214,8 @@ main{
 // MAPA Y EACH
 @each $produit, $img in $salle-de-bains {
     .#{$produit} {
-        height: 250px;
-        max-width: 376px;
+        height: $height-imgProduit;
+        max-width: $width-imgProduit;
         background: {
             image: $img;
             position: bottom;
@@ -227,8 +230,8 @@ main{
 // MAPA Y EACH
 @each $produit, $img in $cuisine {
     .#{$produit} {
-        height: 250px;
-        max-width: 376px;
+        height: $height-imgProduit;
+        max-width: $width-imgProduit;
         background: {
             image: $img;
             position: bottom;
@@ -243,8 +246,8 @@ main{
 // MAPA Y EACH
 @each $produit, $img in $maison {
     .#{$produit} {
-        height: 250px;
-        max-width: 376px;
+        height: $height-imgProduit;
+        max-width: $width-imgProduit;
         background: {
             image: $img;
             position: bottom;
@@ -259,8 +262,8 @@ main{
 // MAPA Y EACH
 @each $produit, $img in $bebes-et-femmes {
     .#{$produit} {
-        height: 250px;
-        max-width: 376px;
+        height: $height-imgProduit;
+        max-width: $width-imgProduit;
         background: {
             image: $img;
             position: bottom;
@@ -277,7 +280,7 @@ main{
             margin-top: 2em;
             .container__boutique--title {
                 color: $color-titles;
-                padding: 1.5em 0 1em 0;
+                padding: $padding-titles;
                 text-align: center;
                 font: {
                     family: $font-secondary;
@@ -298,7 +301,7 @@ main{
 
             .container__boutique--card-title {
                 text-align: left;
-                margin: 0;
+                margin: 1;
                 font: {
                     family: $font-secondary;
                     style: normal;
@@ -308,16 +311,17 @@ main{
             .container__home--button {
                 background-color: $bg-color-btt;
                 border: 1px solid $color-principal ;
-                border-radius: 0.6em;
+                border-radius: $borderRadius-btn;
                 font: {
                     family: $font-principal;
                     style: normal;
                     size: $font-general;
                     weight: lighter;
                 }
+                margin-top: 2;
                 float: left;
                 width: fit-content;
-                padding: 0.2em;
+                padding: $padding-btn;
                 transition: all 0.8s;
                 cursor: pointer;
 
@@ -345,7 +349,7 @@ main {
                     color: $color-np;
                     text-align: center;
                     line-height: 1.5;
-                    padding: 1.5em 0 1em 0;
+                    padding: $padding-titles;
                     font: {
                         family: $font-secondary;
                         style: italic;
@@ -357,7 +361,6 @@ main {
                     color: $color-np;
                     text-align: justify;
                     line-height: 2;
-                    margin: 0 7em;
                     font: {
                         family: $font-secondary;
                         style: normal;
@@ -365,8 +368,6 @@ main {
                     }
                     .container__np--sign {
                         color: $color-np;
-                        line-height: 3;
-                        margin: 3em 0 0 15em;
                         font: {
                             family: $font-secondary;
                             size: $font-general !important;
@@ -384,7 +385,7 @@ main{
         .container__form--title {
             color: $color-titles;
             margin-top: 1em;
-            padding: 1.5em 0 1em 0;
+            padding: $padding-titles;
             text-align: center;
             font: {
                 family: $font-secondary;
@@ -418,15 +419,12 @@ main{
                     weight: 300;
                 }
                     margin-top: 1em;
-            .newsletter1 {
-                margin-left: 2em;
-            }
 
             .container__home--button {
                 background-color: $bg-color-hd-ft ;
                 border: 1px solid $color-principal ;
                 color: $color-principal!important;
-                border-radius: 0.6em;
+                border-radius: $borderRadius-btn;
                 font: {
                     family: $font-principal;
                     style: normal;
@@ -438,7 +436,7 @@ main{
                 decoration-line: none;
                 }
                 width: fit-content;
-                padding: 0.2em;
+                padding: $padding-btn;
                 transition: all 0.8s;
                 cursor: pointer;
                 margin-left: 1em;
@@ -457,7 +455,7 @@ main{
         .container__form--title {
             color: $color-titles;
             margin-top: 1em;
-            padding: 1.5em 0 1em 0;
+            padding: $padding-titles;
             text-align: center;
             font: {
                 family: $font-secondary;
@@ -473,7 +471,7 @@ main{
             background-color: $bg-color-pages ;
             border: none;
             color: $color-principal!important;
-            border-radius: 0.6em;
+            border-radius: $borderRadius-btn;
             font: {
                 family: $font-principal;
                 style: normal;
@@ -485,7 +483,7 @@ main{
             decoration-line: none;
             }
             width: fit-content;
-            padding: 0.2em;
+            padding: $padding-btn;
             transition: all 0.8s;
             cursor: pointer;
         }
@@ -502,7 +500,7 @@ main{
             background-color: $bg-color-hd-ft ;
             border: 1px solid $color-principal ;
             color: $color-principal!important;
-            border-radius: 0.6em;
+            border-radius: $borderRadius-btn;
             font: {
                 family: $font-principal;
                 style: normal;
@@ -514,7 +512,7 @@ main{
             decoration-line: none;
             }
             width: fit-content;
-            padding: 0.2em;
+            padding: $padding-btn;
             transition: all 0.8s;
             cursor: pointer;
 
@@ -529,11 +527,12 @@ main{
 }
 
 // VOIR PLUS
+// nose como hacer para que los iframe me quen responsive porque cuando lo achico no queda bien 
 
 main{
         .container__internal {
             .container__internal--title {
-                padding: 1.5em 0 1em 0;
+                padding: $padding-titles;
                 color: $color-titles;
                 font: {
                     family: $font-secondary;
@@ -542,15 +541,15 @@ main{
                 }
                 text-align: center;
             }
-            // nose que onda aca no me esta tomando los gaps, y el grid realmente
             .grid {
-                height: 100vh;
-                border: solid red;
+                text-align: center;
                 display: grid;
+                width: 100%;
+                height: auto;
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr;
-                grid-column-gap: 50px;
-                grid-row-gap: 15px;
+                grid-column-gap: 20px;
+                grid-row-gap: 35px;
                 grid-template-areas: 
                 "container__internal--videos1 container__internal--videos2"
                 "container__internal--videos3 container__internal--videos4"
@@ -574,11 +573,11 @@ main{
 // PANIER
 
 main {
-        .container__panier--tile {
+        .container__panier--title {
             color: $color-titles;
             margin-top: 1em;
             margin-bottom: 2em;
-            padding: 1.5em 0 1em 0;
+            padding: $padding-titles;
             text-align: center;
             font: {
                 family: $font-secondary;
@@ -588,8 +587,6 @@ main {
             }
         }
         .cart {
-            text-align: center;
-            margin: 0 10em;
             .cart__header {
                 font: {
                     family: $font-secondary;
@@ -633,13 +630,11 @@ footer {
                 weight: lighter;
             }
             text-decoration-line: underline;
-            margin: {
-                left: 1em;
-                right: 2em;}
+            margin: auto
             }
         
         form{
-            margin: 0em 2em;
+            margin: auto;
 
             #adresse__e-mail {
                     font: {
@@ -650,13 +645,13 @@ footer {
                     }
                     text-align: left;
                     line-height: normal;
-                    padding: 0em 0.3em 0em 0.3em;
+                    padding: $padding-email;
                 }
 
             .container__home--button {
                     background-color: $bg-color-hd-ft ;
                     border: 1px solid $color-principal ;
-                    border-radius: 0.6em;
+                    border-radius: $borderRadius-btn;
 
                     font: {
                         family: $font-principal;
@@ -666,7 +661,7 @@ footer {
                     }
                     text-align: center;
                     width: fit-content;
-                    padding: 0.2em;
+                    padding: $padding-btn;
                     transition: all 0.8s;
                     cursor: pointer;
                     margin-left: 0.7em;
@@ -689,7 +684,7 @@ footer {
                 background-color: $bg-color-hd-ft ;
                 border: 1px solid $color-principal ;
                 color: $color-principal!important;
-                border-radius: 0.6em;
+                border-radius: $borderRadius-btn;
                 font: {
                     family: $font-principal;
                     style: normal;
@@ -701,7 +696,7 @@ footer {
                 decoration-line: none;
                 }
                 width: fit-content;
-                padding: 0.2em;
+                padding: $padding-btn;
                 transition: all 0.8s;
                 cursor: pointer;
 
@@ -720,8 +715,8 @@ footer {
                             a{
                                 #smfacebook, #sminstagram {
                                     color: $color-general;
-                                    font-size: 2rem;
-                                    margin-right: 1.3em;
+                                    font-size: $font-size-sm;
+                                    margin-right: 0.4em;
                                 }
                             }
                         }
@@ -730,9 +725,10 @@ footer {
             }
     }
 
-// MEDIA QUERY
+    // MEDIA QUERY
 // Aca me podes ayudar con el footer y decirme si estan bien las medidas del media query
-@media (min-width: 280px) and (max-width: 768px) {
+
+@media (max-width: $phone){
     @mixin sizes ($width, $height-ftr) { 
         width: $width;
         height: $height-ftr;}
@@ -741,16 +737,82 @@ footer {
             display: none;
             position: absolute;
             bottom: 0;
-    }
-    .container__boutique--card {
-        text-align: center;
-    }
-    .card-body {
-        text-align: center;
-    }
-}
+            padding-top: 0.7em;
+            }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+            .carousel {
+                text-align: center;
+                .carousel__title {
+                    color: $color-titles;
+                    padding: $padding-titles;
+                    text-align: center;
+                    font: {
+                        family: $font-secondary;
+                        style: italic;
+                        weight: normal;
+                        }
+        
+                    }
+                    // MAPA Y EACH
+                    @each $produit, $img in $carousel {
+                        .#{$produit} {
+                            height: $height-imgProduit;
+                            width: $width-imgProduit;
+                            background: {
+                                image: $img;
+                                position: center;
+                                repeat: no-repeat;
+                                size: cover;
+                                }
+                                position: relative;
+                        }
+                    }
+                }
+                main{
+                    .container__internal {
+                        .container__internal--title {
+                            padding: $padding-titles;
+                            color: $color-titles;
+                            font: {
+                                family: $font-secondary;
+                                style: italic;
+                                weight: normal;
+                            }
+                            text-align: center;
+                        }
+                        .grid {
+                            text-align: center;
+                            display: grid;
+                            width: 100%;
+                            height: auto;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: 1fr 1fr 1fr 1fr ;
+                            grid-column-gap: 20px;
+                            grid-row-gap: 35px;
+                            grid-template-areas: 
+                            "container__internal--videos1"
+                            "container__internal--videos2"
+                            "container__internal--videos3" 
+                            "container__internal--videos4"
+                            ;
+                            .container__internal--videos1 {
+                                grid-area: "video1";
+                            }
+                            .container__internal--videos2 {
+                                grid-area: "video2";
+                            }
+                            .container__internal--videos3 {
+                                grid-area: "video3";
+                            }
+                            .container__internal--videos4 {
+                                grid-area: "video4";
+                            }
+                        }
+                    }
+                }
+}
+// el footer en 980px me queda mal le pongo relative y esta mas abajo que el absolute pero igual no queda bien
+@media (min-width: $phone) and (max-width: $tablet) {
     @mixin sizes ($width, $height-ftr) { 
         width: $width;
         height: $height-ftr;}
@@ -758,20 +820,120 @@ footer {
             @include sizes(100%, 85px);
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
-            position: absolute;
+            justify-content:space-around;
+            position: relative; 
             bottom: 0;
             padding-top: 0.7em;
             }
+            .carousel {
+                text-align: center;
+                .carousel__title {
+                    color: $color-titles;
+                    padding: $padding-titles;
+                    text-align: center;
+                    font: {
+                        family: $font-secondary;
+                        style: italic;
+                        weight: normal;
+                        }
+        
+                    }
+                    // MAPA Y EACH
+                    @each $produit, $img in $carousel {
+                        .#{$produit} {
+                            height: $height-imgProduit;
+                            width: $width-imgProduit;
+                            background: {
+                                image: $img;
+                                position: center;
+                                repeat: no-repeat;
+                                size: cover;
+                                }
+                                position: relative;
+                        }
+                    }
+                }
     .container__boutique--card {
-        text-align: center;
+        text-align: left;
     }
     .card-body {
         text-align: center;
     }
-}
+    main{
+        .container__form{
+            .container__form--title {
+                color: $color-titles;
+                margin-top: 1em;
+                padding: $padding-titles;
+                text-align: center;
+                font: {
+                    family: $font-secondary;
+                    size: $font-h4;
+                    style: italic;
+                    weight: normal;
+                }
+            }
+            label {
+                font: {
+                    family: $font-secondary;
+                    style: normal;
+                    weight: 300;
+                }
+            }
+            .form-group{
+                .form-control {
+                    font: {
+                        family: $font-secondary;
+                        style: normal;
+                        weight: 300;
+                    }
+                    margin: 1em 0em;
+                }
+            }
+            // Aca no me esta tomando el "valor" digamos de eliminar y enviar formulario
+            .newsletter {
+                        font: {
+                        family: $font-secondary;
+                        style: normal;
+                        weight: 300;
+                    }
+                        margin-top: 1em;
+                .newsletter1 {
+                    margin-top: 1!important;
+                }
+    
+                .container__home--button {
+                    background-color: $bg-color-hd-ft ;
+                    border: 1px solid $color-principal ;
+                    color: $color-principal!important;
+                    border-radius: $borderRadius-btn;
+                    font: {
+                        family: $font-principal;
+                        style: normal;
+                        size: $font-general;
+                        weight: lighter;
+                    }
+                    text: {
+                    align: center;
+                    decoration-line: none;
+                    }
+                    width: fit-content;
+                    padding: $padding-btn;
+                    transition: all 0.8s;
+                    cursor: pointer;
+    
+                    &:hover {
+                        background:$bg-color-btt;
+                        border: 1px solid $bg-color-btt ;
+                        color: $color-titles!important;
+                        text-decoration-line: none;
+                    }
+                }
+            }
+        }
+}}
 
-@media (min-width: 1024px) and (max-width: 1920px) {
+@media (min-width: $tablet) and (max-width: $desktop) {
     @mixin sizes ($width, $height-ftr) { 
         width: $width;
         height: $height-ftr;}
@@ -779,9 +941,37 @@ footer {
             @include sizes(100%, 85px);
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
-            position: absolute;
+            justify-content:space-around;
+            position: relative;
             bottom: 0;
             padding-top: 0.7em;
             }
+            .carousel {
+                .carousel__title {
+                    color: $color-titles;
+                    padding: $padding-titles;
+                    text-align: center;
+                    font: {
+                        family: $font-secondary;
+                        style: italic;
+                        weight: normal;
+                        }
+        
+                    }
+                    // MAPA Y EACH
+                    @each $produit, $img in $carousel {
+                        .#{$produit} {
+                            height: $height-imgProduit;
+                            width: $width-imgProduit;
+                            text-align: center;
+                            background: {
+                                image: $img;
+                                position: center;
+                                repeat: no-repeat;
+                                size: cover;
+                                }
+                                position: relative;
+                        }
+                    }
+                }
 }

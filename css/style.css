@@ -101,7 +101,7 @@ main .carousel {
     text-align: center;
     height: 250px;
     width: 376px;
-    background-image: url(../media/img-prod19.jpg);
+    background-image: url(../media/img-prod19.webp);
     background-position: center;
     background-repeat: no-repeat; }
   main .carousel .carousel-img3 {
@@ -273,7 +273,7 @@ main .container__home {
 .img-prod16 {
   height: auto;
   max-width: 100%;
-  background-image: url(../media/img-prod16.jpg);
+  background-image: url(../media/img-prod16.webp);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
@@ -281,7 +281,7 @@ main .container__home {
 .img-prod17 {
   height: auto;
   max-width: 100%;
-  background-image: url(../media/img-prod17.jpg);
+  background-image: url(../media/img-prod17.webp);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
@@ -297,7 +297,7 @@ main .container__home {
 .img-prod19 {
   height: auto;
   max-width: 100%;
-  background-image: url(../media/img-prod19.jpg);
+  background-image: url(../media/img-prod19.webp);
   background-position: bottom;
   background-repeat: no-repeat;
   position: relative; }
@@ -646,7 +646,7 @@ footer {
     .carousel .carousel-img2 {
       height: auto;
       width: 100%;
-      background-image: url(../media/img-prod19.jpg);
+      background-image: url(../media/img-prod19.webp);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -715,7 +715,7 @@ footer {
     .carousel .carousel-img2 {
       height: auto;
       width: 100%;
-      background-image: url(../media/img-prod19.jpg);
+      background-image: url(../media/img-prod19.webp);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -808,7 +808,7 @@ footer {
     height: auto;
     width: 100%;
     text-align: center;
-    background-image: url(../media/img-prod19.jpg);
+    background-image: url(../media/img-prod19.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

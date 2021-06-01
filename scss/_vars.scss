@@ -4,12 +4,20 @@
 $width: 100%;
 $height-ftr: 85px;
 $height-main: 1920px;
+$height-mobile: 640px;
+$height-ipad: 1024px;
 
 // vars de images
 $height-imgProduit: auto;
 $width-imgProduit: 100%;
+
+// vars carousel
 $sizeHeight-carousel: 250px;
 $sizeWidth-carousel: 376px;
+
+// vars card boutique
+$widthCard: 376px; 
+$heightCard: 380px;
 
 // others vars
 $padding-titles: 1.5em 0 1em 0;

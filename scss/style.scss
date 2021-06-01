@@ -7,9 +7,8 @@
 @import "map";
 @import "vars";
 
-
 // RESET
-*  {
+* {
     margin: 0;
     padding: 0;
     color: inherit;
@@ -27,16 +26,18 @@ body {
         repeat: no-repeat;
         size: cover;
     }
-    position: relative;
+    height: auto;
+    min-height: 100%;
 }
 .homeBody {
     background: {
         attachment: fixed;
-        image: url(../media/environmental-protection-326923_1280.jpg);
+        image: url("../media/avenue-2215317_1920.jpg");
         position: center;
         repeat: no-repeat;
         size: cover;
     }
+    height: 100%;
     position: relative;
 }
 
@@ -48,7 +49,7 @@ h2 {
     font-size: $font-h2;
 }
 
-h3  {
+h3 {
     font-size: $font-h3;
 }
 
@@ -56,11 +57,14 @@ h4 {
     font-size: $font-general;
 }
 
-p, a, li {
+a,
+li,
+p {
     font-size: $font-general;
 }
 
-header, footer {
+footer,
+header {
     background-color: $bg-color-hd-ft;
 }
 
@@ -74,67 +78,63 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
 
-    .nav-title{
+    .nav-title {
         position: relative;
         top: 0.4em;
         display: flex;
 
         #logo {
-            color: $color-principal;  
+            color: $color-principal;
             font-size: $font-size-logo;
         }
 
-            
-            .nav-h1 {
-                padding-left: 0.2em;
-                color: $color-principal ;
-                text: {
-                    align: left;
-                    decoration-line: none;
-                }
-                font: {
-                    family: $font-principal;
-                    style: italic;
-                    weight: 200;
-                }
+        .nav-h1 {
+            padding-left: 0.2em;
+            color: $color-principal;
+            text: {
+                align: left;
+                decoration-line: none;
+            }
+            font: {
+                family: $font-principal;
+                style: italic;
+                weight: 200;
             }
         }
-
-.nav {
-    display: flex;
-    position: relative;
-    margin: {
-        top: 0.5em;
-        left: auto;
     }
-    .nav-link{
-        color: $color-general;
-        font: {
-            family: $font-principal;
-            size: $font-h4 ;
-            style: normal;
-            weight: normal;
+
+    .nav {
+        display: flex;
+        position: relative;
+        margin: {
+            top: 0.5em;
+            left: auto;
         }
-        &:hover {
-            text-decoration-line:underline ;
+        .nav-link {
             color: $color-general;
+            font: {
+                family: $font-principal;
+                size: $font-h4;
+                style: normal;
+                weight: normal;
+            }
+            &:hover {
+                text-decoration-line: underline;
+                color: $color-general;
             }
         }
     }
 }
 
 // MAIN
-
-// OPERACIONES
 main {
-    height: ($height-main / 2) +150px;
+    padding-bottom: 85px;
 }
 
 // INDEX
-// quiero que el carrusel me quede a la izquierda, para que que no me tape la foto del centro, pero cuando le pongo el float left, me quedan bien las imagenes pero me esta armando un margen a la izquierda que no se que onda, no lo veo para eliminarlo, porque de esa forma podria moverlo un poquito a la izquierda y quedaria mejor.
-main{
+
+main {
     .carousel {
-        text-align: center;
         .carousel__title {
             color: $color-titles;
             padding: $padding-titles;
@@ -142,71 +142,75 @@ main{
                 family: $font-secondary;
                 style: italic;
                 weight: normal;
-                }
             }
-            // MAPA Y EACH
-            @each $produit, $img in $carousel {
-                .#{$produit} {
-                    text-align: center;
-                    height: $sizeHeight-carousel;
-                    width: $sizeWidth-carousel;
-                    background: {
-                        image: $img;
-                        position: center;
-                        repeat: no-repeat;
-                        }
+            text-align: center;
+        }
+        // MAPA Y EACH
+        @each $produit, $img in $carousel {
+            .#{$produit} {
+                height: $sizeHeight-carousel;
+                width: $sizeWidth-carousel;
+                background: {
+                    image: $img;
+                    position: center;
+                    repeat: no-repeat;
+                }
+                text-align: center;
+            }
+        }
+    }
+
+    .container__home {
+        width: fit-content;
+        position: fixed;
+        top: 73%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+
+        .container__home--title {
+            color: $color-titles;
+            font: {
+                family: $font-principal;
+                style: normal;
+                weight: normal;
+            }
+            text: {
+                align: center;
+                decoration: underline;
+            }
+        }
+
+        .container__home--button {
+            background-color: $bg-color-btt;
+            border: 1px solid $bg-color-btt;
+            border-radius: $borderRadius-btn;
+
+            font: {
+                family: $font-principal;
+                style: normal;
+                weight: lighter;
+                size: $font-size-btn;
+            }
+            text-align: center;
+            width: fit-content;
+            padding: $padding-btn;
+
+            &:hover {
+                background: $bg-color-hd-ft;
+                border: 1px solid $color-principal;
+            }
+            .cta {
+                color: $color-titles;
+                &:hover {
+                    color: $color-principal;
                 }
             }
         }
-    
-    .container__home {
-            width: fit-content;
-            position:fixed;
-            top: 73%;
-            left: 0;
-            right: 0;
-            margin: auto;
-            text-align: center;
+    }
+}
 
-                .container__home--title { 
-                            color: $color-titles;
-                            font: {
-                                family: $font-principal;
-                                style: normal;
-                                weight: normal;
-                            }
-                            text: {
-                                align: center;
-                                decoration: underline;
-                            }
-                        }
-
-                    .container__home--button {
-                                background-color: $bg-color-btt;
-                                border: 1px solid $bg-color-btt;
-                                border-radius: $borderRadius-btn;
-
-                                font: {
-                                    family: $font-principal;
-                                    style: normal;
-                                    weight: lighter;
-                                    size: $font-size-btn;
-                                }
-                                text-align: center;
-                                width: fit-content;
-                                padding: $padding-btn;
-
-                                &:hover {
-                                    background:$bg-color-hd-ft;
-                                    border: 1px solid $color-principal;
-                                }
-                                .cta {
-                                    color: $color-titles;
-                                    &:hover {color: $color-principal;} 
-                                    }
-                        }
-                    }
-                }
 // BOUTIQUE
 
 /* PRODUITS DE SALLE DE BAINS */
@@ -220,8 +224,8 @@ main{
             image: $img;
             position: bottom;
             repeat: no-repeat;
-            }
-            position: relative;
+        }
+        position: relative;
     }
 }
 
@@ -236,8 +240,8 @@ main{
             image: $img;
             position: bottom;
             repeat: no-repeat;
-            }
-            position: relative;
+        }
+        position: relative;
     }
 }
 
@@ -252,8 +256,8 @@ main{
             image: $img;
             position: bottom;
             repeat: no-repeat;
-            }
-            position: relative;
+        }
+        position: relative;
     }
 }
 
@@ -268,15 +272,15 @@ main{
             image: $img;
             position: bottom;
             repeat: no-repeat;
-            }
-            position: relative;
+        }
+        position: relative;
     }
 }
 
 /* CONTAINER */
-main{
-    .container{
-        .container__boutique{
+main {
+    .container {
+        .container__boutique {
             margin-top: 2em;
             .container__boutique--title {
                 color: $color-titles;
@@ -288,7 +292,7 @@ main{
                     weight: normal;
                 }
             }
-            .container__boutique--card{
+            .container__boutique--card {
                 background-color: $bg-color-pages;
                 border: solid 1px $color-principal;
                 font: {
@@ -296,95 +300,107 @@ main{
                     style: normal;
                     weight: normal;
                 }
-            }
-            }
-
-            .container__boutique--card-title {
-                text-align: left;
-                margin: 1;
-                font: {
-                    family: $font-secondary;
-                    style: normal;
-                    weight: lighter;
-                }
-            }
-            .container__home--button {
-                background-color: $bg-color-btt;
-                border: 1px solid $color-principal ;
-                border-radius: $borderRadius-btn;
-                font: {
-                    family: $font-principal;
-                    style: normal;
-                    size: $font-general;
-                    weight: lighter;
-                }
-                margin-top: 2;
-                float: left;
-                width: fit-content;
-                padding: $padding-btn;
-                transition: all 0.8s;
-                cursor: pointer;
-
-                &:hover {
-                    color: $color-principal!important;
-                    background-color: $bg-color-hd-ft;
-                    border: 1px solid $bg-color-btt ;
-                }
-                a {
-                    text-decoration-line: none!important;
-                    color: $color-titles!important;
-                    &:hover {
-                        color: $color-principal!important;
-                    }
-                }
-            }
+                height: $heightCard;
+                width: $widthCard;
             }
         }
+
+        .container__boutique--card-title {
+            text-align: left;
+            margin: 1;
+            font: {
+                family: $font-secondary;
+                style: normal;
+                weight: lighter;
+            }
+        }
+        .container__home--button {
+            background-color: $bg-color-btt;
+            border: 1px solid $color-principal;
+            border-radius: $borderRadius-btn;
+            font: {
+                family: $font-principal;
+                style: normal;
+                size: $font-general;
+                weight: lighter;
+            }
+            margin-top: 2;
+            float: left;
+            width: fit-content;
+            padding: $padding-btn;
+            transition: all 0.8s;
+            cursor: pointer;
+
+            &:hover {
+                color: $color-principal!important;
+                background-color: $bg-color-hd-ft;
+                border: 1px solid $bg-color-btt;
+            }
+            a {
+                text-decoration-line: none!important;
+                color: $color-titles!important;
+                &:hover {
+                    color: $color-principal!important;
+                }
+            }
+        }
+    }
+}
 
 // NOTRE PHILOSOPHIE
 
 main {
-    section{
-                .container__np--title {
-                    color: $color-np;
-                    text-align: center;
-                    line-height: 1.5;
-                    padding: $padding-titles;
-                    font: {
-                        family: $font-secondary;
-                        style: italic;
-                        weight: normal;
-                            }
+    section {
+        .container__np--title {
+            color: $color-np;
+            text-align: center;
+            line-height: 1.5;
+            padding: $padding-titles;
+            font: {
+                family: $font-secondary;
+                style: italic;
+                weight: normal;
+            }
+        }
+    
+    .container__np--text {
+        color: $color-np;
+        text-align: justify;
+        line-height: 2;
+        font: {
+            family: $font-secondary;
+            style: normal;
+            weight: normal;
+        }
+        .img-chene {
+            float: left;
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+        .img-couple {
+            float: right;
+            margin-right: 5rem;
+            .container__np--sign {
+                color: $color-np;
+                font: {
+                    family: $font-secondary;
+                    size: $font-general !important;
+                    style: italic;
+                    weight: lighter;
+                }
                 }
             }
-                .container__np--text {
-                    color: $color-np;
-                    text-align: justify;
-                    line-height: 2;
-                    font: {
-                        family: $font-secondary;
-                        style: normal;
-                        weight: normal;
-                    }
-                    .container__np--sign {
-                        color: $color-np;
-                        font: {
-                            family: $font-secondary;
-                            size: $font-general !important;
-                            style: italic;
-                            weight: lighter;
-                            }
-                        }
-                    }
-                }
+        }
+    }
+}
 
 // CONTACT
 
-main{
-    .container__form{
+main {
+    .container__form {
         .container__form--title {
             color: $color-titles;
-            margin-top: 1em;
+            margin-top: 2em;
             padding: $padding-titles;
             text-align: center;
             font: {
@@ -401,28 +417,27 @@ main{
                 weight: 300;
             }
         }
-        .form-group{
+        .form-group {
             .form-control {
                 font: {
                     family: $font-secondary;
                     style: normal;
                     weight: 300;
                 }
-                margin: 1em 0em;
+                margin: 1em 0;
             }
         }
-        // Aca no me esta tomando el "valor" digamos de eliminar y enviar formulario
         .newsletter {
-                    font: {
-                    family: $font-secondary;
-                    style: normal;
-                    weight: 300;
-                }
-                    margin-top: 1em;
+            font: {
+                family: $font-secondary;
+                style: normal;
+                weight: 300;
+            }
+            margin-top: 1em;
 
             .container__home--button {
-                background-color: $bg-color-hd-ft ;
-                border: 1px solid $color-principal ;
+                background-color: $bg-color-hd-ft;
+                border: 1px solid $color-principal;
                 color: $color-principal!important;
                 border-radius: $borderRadius-btn;
                 font: {
@@ -432,8 +447,8 @@ main{
                     weight: lighter;
                 }
                 text: {
-                align: center;
-                decoration-line: none;
+                    align: center;
+                    decoration-line: none;
                 }
                 width: fit-content;
                 padding: $padding-btn;
@@ -442,16 +457,16 @@ main{
                 margin-left: 1em;
 
                 &:hover {
-                    background:$bg-color-btt;
-                    border: 1px solid $bg-color-btt ;
+                    background: $bg-color-btt;
+                    border: 1px solid $bg-color-btt;
                     color: $color-titles!important;
                     text-decoration-line: none;
                 }
             }
         }
     }
-    // nose que onda solo en la seccion de contacto me esta tomando el mismo escrito, titulos del modal del whatsapp con el del footer, solo en contacto no entiendo
-    .contact{
+    .contact {
+        text-align: center!important;
         .container__form--title {
             color: $color-titles;
             margin-top: 1em;
@@ -468,7 +483,7 @@ main{
             padding-bottom: 2em;
         }
         .container__home--buttonWhatsapp {
-            background-color: $bg-color-pages ;
+            background-color: $bg-color-pages;
             border: none;
             color: $color-principal!important;
             border-radius: $borderRadius-btn;
@@ -479,8 +494,8 @@ main{
                 weight: lighter;
             }
             text: {
-            align: center;
-            decoration-line: none;
+                align: center;
+                decoration-line: none;
             }
             width: fit-content;
             padding: $padding-btn;
@@ -497,8 +512,8 @@ main{
             }
         }
         .container__home--buttonModal {
-            background-color: $bg-color-hd-ft ;
-            border: 1px solid $color-principal ;
+            background-color: $bg-color-hd-ft;
+            border: 1px solid $color-principal;
             color: $color-principal!important;
             border-radius: $borderRadius-btn;
             font: {
@@ -508,8 +523,8 @@ main{
                 weight: lighter;
             }
             text: {
-            align: center;
-            decoration-line: none;
+                align: center;
+                decoration-line: none;
             }
             width: fit-content;
             padding: $padding-btn;
@@ -517,8 +532,8 @@ main{
             cursor: pointer;
 
             &:hover {
-                background:$bg-color-btt;
-                border: 1px solid $bg-color-btt ;
+                background: $bg-color-btt;
+                border: 1px solid $bg-color-btt;
                 color: $color-titles!important;
                 text-decoration-line: none;
             }
@@ -527,149 +542,196 @@ main{
 }
 
 // VOIR PLUS
-// nose como hacer para que los iframe me quen responsive porque cuando lo achico no queda bien 
 
-main{
-        .container__internal {
-            .container__internal--title {
-                padding: $padding-titles;
-                color: $color-titles;
-                font: {
-                    family: $font-secondary;
-                    style: italic;
-                    weight: normal;
-                }
-                text-align: center;
+main {
+    .container__internal {
+        .container__internal--title {
+            padding: $padding-titles;
+            color: $color-titles;
+            font: {
+                family: $font-secondary;
+                style: italic;
+                weight: normal;
             }
-            .grid {
-                text-align: center;
-                display: grid;
-                width: 100%;
-                height: auto;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: 1fr 1fr;
-                grid-column-gap: 20px;
-                grid-row-gap: 35px;
-                grid-template-areas: 
-                "container__internal--videos1 container__internal--videos2"
-                "container__internal--videos3 container__internal--videos4"
-                ;
-                .container__internal--videos1 {
-                    grid-area: "video1";
-                }
-                .container__internal--videos2 {
-                    grid-area: "video2";
-                }
-                .container__internal--videos3 {
-                    grid-area: "video3";
-                }
-                .container__internal--videos4 {
-                    grid-area: "video4";
-                }
+            text-align: center;
+        }
+        .container__internal--iframe {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding-top: 56.25%;
+        }
+        .grid {
+            margin-top: 3rem;
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-row-gap: 5rem;
+            grid-template-areas: "container__internal--videos1 container__internal--videos2" "container__internal--videos3 container__internal--videos4";
+            .container__internal--videos1 {
+                grid-area: "video1";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 95%;
+                height: 100%;
+                margin-left: 0.8rem;
+                margin-right: 0.8rem;
+            }
+            .container__internal--videos2 {
+                grid-area: "video2";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 95%;
+                height: 100%;
+                margin-left: 0.8rem;
+                margin-right: 0.8rem;
+            }
+            .container__internal--videos3 {
+                grid-area: "video3";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 95%;
+                height: 100%;
+                margin-left: 0.8rem;
+                margin-right: 0.8rem;
+            }
+            .container__internal--videos4 {
+                grid-area: "video4";
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                width: 95%;
+                height: 100%;
+                margin-left: 0.8rem;
+                margin-right: 0.8rem;
             }
         }
     }
+}
 
 // PANIER
 
 main {
-        .container__panier--title {
-            color: $color-titles;
-            margin-top: 1em;
-            margin-bottom: 2em;
-            padding: $padding-titles;
-            text-align: center;
-            font: {
-                family: $font-secondary;
-                size: $font-h4;
-                style: italic;
-                weight: normal;
-            }
+    .container__panier--title {
+        color: $color-titles;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        padding: $padding-titles;
+        text-align: center;
+        font: {
+            family: $font-secondary;
+            size: $font-h4;
+            style: italic;
+            weight: normal;
         }
-        .cart {
+    }
+    .table-responsive {
+        .table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
             .cart__header {
                 font: {
                     family: $font-secondary;
                     style: normal;
                     weight: 300;
                 }
+                text-align: center;
+                padding: 0.1rem;
             }
             .cart__body {
-                border-top: $color-titles;
-                border-bottom: $color-titles;
                 font: {
                     family: $font-secondary;
                     style: normal;
                     weight: 300;
                 }
+                text-align: center;
+                padding: 0.1rem;
+            }
         }
     }
+    
 }
 
 // FOOTER
 
 // MIXIN
-@mixin sizes ($width, $height-ftr) { 
+@mixin sizes ($width, $height-ftr) {
     width: $width;
-    height: $height-ftr;}
+    height: $height-ftr;
+}
 
-    // INCLUDE
+// INCLUDE
 footer {
     @include sizes(100%, 85px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    position: absolute;
+    position: relative;
     bottom: 0;
-    padding-top: 0.7em;
+    margin-top: 225px;
+    padding-top: 1rem;
 
-    div{
+    div {
         .subtitle {
             font: {
                 family: $font-principal;
                 weight: lighter;
             }
             text-decoration-line: underline;
-            margin: auto
-            }
-        
-        form{
+            margin: auto;
+        }
+
+        form {
             margin: auto;
 
             #adresse__e-mail {
-                    font: {
-                        family: $font-principal;
-                        size: $font-email;
-                        style: normal;
-                        weight: lighter;
-                    }
-                    text-align: left;
-                    line-height: normal;
-                    padding: $padding-email;
+                font: {
+                    family: $font-principal;
+                    size: $font-email;
+                    style: normal;
+                    weight: lighter;
                 }
+                text-align: center;
+                line-height: normal;
+                padding: $padding-email;
+                width: fit-content;
+            }
 
             .container__home--button {
-                    background-color: $bg-color-hd-ft ;
-                    border: 1px solid $color-principal ;
-                    border-radius: $borderRadius-btn;
+                background-color: $bg-color-hd-ft;
+                border: 1px solid $color-principal;
+                border-radius: $borderRadius-btn;
 
-                    font: {
-                        family: $font-principal;
-                        style: normal;
-                        size: $font-general;
-                        weight: lighter;
-                    }
-                    text-align: center;
-                    width: fit-content;
-                    padding: $padding-btn;
-                    transition: all 0.8s;
-                    cursor: pointer;
-                    margin-left: 0.7em;
+                font: {
+                    family: $font-principal;
+                    style: normal;
+                    size: $font-general;
+                    weight: lighter;
+                }
+                text-align: center;
+                width: fit-content;
+                padding: $padding-btn;
+                transition: all 0.8s;
+                cursor: pointer;
+                margin-left: 0.7em;
 
-                    &:hover {
-                        background:$bg-color-btt;
-                        border: 1px solid $bg-color-btt ;
-                    }
+                &:hover {
+                    background: $bg-color-btt;
+                    border: 1px solid $bg-color-btt;
+                }
             }
             .container__boutique--card-title {
                 text-align: left;
@@ -681,8 +743,8 @@ footer {
                 }
             }
             .container__home--buttonModal {
-                background-color: $bg-color-hd-ft ;
-                border: 1px solid $color-principal ;
+                background-color: $bg-color-hd-ft;
+                border: 1px solid $color-principal;
                 color: $color-principal!important;
                 border-radius: $borderRadius-btn;
                 font: {
@@ -692,8 +754,8 @@ footer {
                     weight: lighter;
                 }
                 text: {
-                align: center;
-                decoration-line: none;
+                    align: center;
+                    decoration-line: none;
                 }
                 width: fit-content;
                 padding: $padding-btn;
@@ -701,133 +763,68 @@ footer {
                 cursor: pointer;
 
                 &:hover {
-                    background:$bg-color-btt;
-                    border: 1px solid $bg-color-btt ;
+                    background: $bg-color-btt;
+                    border: 1px solid $bg-color-btt;
                     color: $color-titles!important;
                     text-decoration-line: none;
                 }
             }
         }
-                .social-media__links  {
-                    ul{
-                        li{ 
-                            display: inline-block;
-                            a{
-                                #smfacebook, #sminstagram {
-                                    color: $color-general;
-                                    font-size: $font-size-sm;
-                                    margin-right: 0.4em;
-                                }
-                            }
+            .social-media__links {
+            ul {
+                li {
+                    display: inline-block;
+                    a {
+                        #smfacebook,
+                        #sminstagram {
+                            color: $color-general;
+                            font-size: $font-size-sm;
+                            margin-right: 0.4em;
                         }
-                    } 
+                    }
                 }
             }
+        }
     }
-
-    // MEDIA QUERY
-// Aca me podes ayudar con el footer y decirme si estan bien las medidas del media query
-
-@media (max-width: $phone){
-    @mixin sizes ($width, $height-ftr) { 
-        width: $width;
-        height: $height-ftr;}
-        footer {
-            @include sizes(100%, 85px);
-            display: none;
-            position: absolute;
-            bottom: 0;
-            padding-top: 0.7em;
-            }
-
-            .carousel {
-                text-align: center;
-                .carousel__title {
-                    color: $color-titles;
-                    padding: $padding-titles;
-                    text-align: center;
-                    font: {
-                        family: $font-secondary;
-                        style: italic;
-                        weight: normal;
-                        }
-        
-                    }
-                    // MAPA Y EACH
-                    @each $produit, $img in $carousel {
-                        .#{$produit} {
-                            height: $height-imgProduit;
-                            width: $width-imgProduit;
-                            background: {
-                                image: $img;
-                                position: center;
-                                repeat: no-repeat;
-                                size: cover;
-                                }
-                                position: relative;
-                        }
-                    }
-                }
-                main{
-                    .container__internal {
-                        .container__internal--title {
-                            padding: $padding-titles;
-                            color: $color-titles;
-                            font: {
-                                family: $font-secondary;
-                                style: italic;
-                                weight: normal;
-                            }
-                            text-align: center;
-                        }
-                        .grid {
-                            text-align: center;
-                            display: grid;
-                            width: 100%;
-                            height: auto;
-                            grid-template-columns: 1fr;
-                            grid-template-rows: 1fr 1fr 1fr 1fr ;
-                            grid-column-gap: 20px;
-                            grid-row-gap: 35px;
-                            grid-template-areas: 
-                            "container__internal--videos1"
-                            "container__internal--videos2"
-                            "container__internal--videos3" 
-                            "container__internal--videos4"
-                            ;
-                            .container__internal--videos1 {
-                                grid-area: "video1";
-                            }
-                            .container__internal--videos2 {
-                                grid-area: "video2";
-                            }
-                            .container__internal--videos3 {
-                                grid-area: "video3";
-                            }
-                            .container__internal--videos4 {
-                                grid-area: "video4";
-                            }
-                        }
-                    }
-                }
 }
-// el footer en 980px me queda mal le pongo relative y esta mas abajo que el absolute pero igual no queda bien
-@media (min-width: $phone) and (max-width: $tablet) {
-    @mixin sizes ($width, $height-ftr) { 
-        width: $width;
-        height: $height-ftr;}
-        footer {
-            @include sizes(100%, 85px);
-            display: flex;
-            flex-direction: row;
-            justify-content:space-around;
-            position: relative; 
-            bottom: 0;
-            padding-top: 0.7em;
+// MEDIA QUERIES
+
+
+// MEDIA QUERY MOBILE
+@media only screen and (max-width: $phone){
+    // Index
+    main {
+        .container__home {
+            width: fit-content;
+            position: fixed;
+            top: 75%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+
+            .container__home--title {
+                color: $color-titles;
+                font: {
+                    family: $font-principal;
+                    style: normal;
+                    weight: normal;
+                }
+                text: {
+                    align: center;
+                    decoration: underline;
+                }
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
             }
-            .carousel {
-                text-align: center;
-                .carousel__title {
+        }
+    }
+    // Boutique
+    main {
+        .container {
+            .container__boutique {
+                margin-top: 2em;
+                .container__boutique--title {
                     color: $color-titles;
                     padding: $padding-titles;
                     text-align: center;
@@ -835,35 +832,101 @@ footer {
                         family: $font-secondary;
                         style: italic;
                         weight: normal;
-                        }
-        
-                    }
-                    // MAPA Y EACH
-                    @each $produit, $img in $carousel {
-                        .#{$produit} {
-                            height: $height-imgProduit;
-                            width: $width-imgProduit;
-                            background: {
-                                image: $img;
-                                position: center;
-                                repeat: no-repeat;
-                                size: cover;
-                                }
-                                position: relative;
-                        }
                     }
                 }
-    .container__boutique--card {
-        text-align: left;
+                .container__boutique--card {
+                    background-color: $bg-color-pages;
+                    border: solid 1px $color-principal;
+                    font: {
+                        family: $font-secondary;
+                        style: normal;
+                        weight: normal;
+                    }
+                    height: $heightCard;
+                    width: $widthCard;
+                    margin: 0 1rem!important;
+                }
+            }
+            .container__boutique--card-title {
+                text-align: left;
+                margin: 1;
+                font: {
+                    family: $font-secondary;
+                    style: normal;
+                    weight: lighter;
+                }
+            }
+            .container__home--button {
+                background-color: $bg-color-btt;
+                border: 1px solid $color-principal;
+                border-radius: $borderRadius-btn;
+                font: {
+                    family: $font-principal;
+                    style: normal;
+                    size: $font-general;
+                    weight: lighter;
+                }
+                margin-top: 2;
+                float: left;
+                width: fit-content;
+                padding: $padding-btn;
+                transition: all 0.8s;
+                cursor: pointer;
+                &:hover {
+                    color: $color-principal!important;
+                    background-color: $bg-color-hd-ft;
+                    border: 1px solid $bg-color-btt;
+                }
+                a {
+                    text-decoration-line: none!important;
+                    color: $color-titles!important;
+                    &:hover {
+                        color: $color-principal!important;
+                    }
+                }
+            }
+        }
     }
-    .card-body {
-        text-align: center;
+    // Notre Philosophie
+    main {
+        section {
+        .container__np--text {
+            color: $color-np;
+            text-align: center;
+            line-height: 2;
+            font: {
+                family: $font-secondary;
+                style: normal;
+                weight: normal;
+            }
+            .img-fluid {
+                margin-bottom: 1rem;
+            }
+            .img-chene {
+                text-align: center!important;
+            }
+            .img-couple {
+                text-align: center!important;
+                margin-left: 4rem;
+                .container__np--sign {
+                    color: $color-np;
+                    font: {
+                        family: $font-secondary;
+                        size: $font-general !important;
+                        style: italic;
+                        weight: lighter;
+                    }
+                    }
+                }
+            }
+        }
     }
-    main{
-        .container__form{
+    // Contact
+    main {
+        .container__form {
             .container__form--title {
                 color: $color-titles;
-                margin-top: 1em;
+                margin-top: 2em;
                 padding: $padding-titles;
                 text-align: center;
                 font: {
@@ -880,31 +943,31 @@ footer {
                     weight: 300;
                 }
             }
-            .form-group{
+            .form-group {
                 .form-control {
                     font: {
                         family: $font-secondary;
                         style: normal;
                         weight: 300;
                     }
-                    margin: 1em 0em;
+                    margin: 1em 0;
                 }
             }
-            // Aca no me esta tomando el "valor" digamos de eliminar y enviar formulario
             .newsletter {
-                        font: {
-                        family: $font-secondary;
-                        style: normal;
-                        weight: 300;
-                    }
-                        margin-top: 1em;
-                .newsletter1 {
-                    margin-top: 1!important;
+                font: {
+                    family: $font-secondary;
+                    style: normal;
+                    weight: 300;
                 }
-    
+                margin-top: 1em;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex: 1;
+                text-align: center!important;
                 .container__home--button {
-                    background-color: $bg-color-hd-ft ;
-                    border: 1px solid $color-principal ;
+                    background-color: $bg-color-hd-ft;
+                    border: 1px solid $color-principal;
                     color: $color-principal!important;
                     border-radius: $borderRadius-btn;
                     font: {
@@ -914,64 +977,506 @@ footer {
                         weight: lighter;
                     }
                     text: {
-                    align: center;
-                    decoration-line: none;
+                        align: center!important;
+                        decoration-line: none;
                     }
                     width: fit-content;
                     padding: $padding-btn;
                     transition: all 0.8s;
                     cursor: pointer;
-    
+                    margin-left: 1em;
                     &:hover {
-                        background:$bg-color-btt;
-                        border: 1px solid $bg-color-btt ;
+                        background: $bg-color-btt;
+                        border: 1px solid $bg-color-btt;
                         color: $color-titles!important;
                         text-decoration-line: none;
                     }
                 }
             }
         }
-}}
-
-@media (min-width: $tablet) and (max-width: $desktop) {
-    @mixin sizes ($width, $height-ftr) { 
-        width: $width;
-        height: $height-ftr;}
-        footer {
-            @include sizes(100%, 85px);
-            display: flex;
-            flex-direction: row;
-            justify-content:space-around;
-            position: relative;
-            bottom: 0;
-            padding-top: 0.7em;
+        .contact {
+            text-align: center!important;
+            .container__form--title {
+                color: $color-titles;
+                margin-top: 1em;
+                padding: $padding-titles;
+                text-align: center;
+                font: {
+                    family: $font-secondary;
+                    size: $font-h4;
+                    style: italic;
+                    weight: normal;
+                }
             }
-            .carousel {
-                .carousel__title {
-                    color: $color-titles;
-                    padding: $padding-titles;
-                    text-align: center;
+            .contact__logos {
+                padding-bottom: 2em;
+            }
+            .container__home--buttonWhatsapp {
+                background-color: $bg-color-pages;
+                border: none;
+                color: $color-principal!important;
+                border-radius: $borderRadius-btn;
+                font: {
+                    family: $font-principal;
+                    style: normal;
+                    size: $font-general;
+                    weight: lighter;
+                }
+                text: {
+                    align: center;
+                    decoration-line: none;
+                }
+                width: fit-content;
+                padding: $padding-btn;
+                transition: all 0.8s;
+                cursor: pointer;
+            }
+            .container__boutique--card-title {
+                text-align: left;
+                margin: 0;
+                font: {
+                    family: $font-secondary;
+                    style: normal;
+                    weight: lighter;
+                }
+            }
+            .container__home--buttonModal {
+                background-color: $bg-color-hd-ft;
+                border: 1px solid $color-principal;
+                color: $color-principal!important;
+                border-radius: $borderRadius-btn;
+                font: {
+                    family: $font-principal;
+                    style: normal;
+                    size: $font-general;
+                    weight: lighter;
+                }
+                text: {
+                    align: center;
+                    decoration-line: none;
+                }
+                width: fit-content;
+                padding: $padding-btn;
+                transition: all 0.8s;
+                cursor: pointer;
+                &:hover {
+                    background: $bg-color-btt;
+                    border: 1px solid $bg-color-btt;
+                    color: $color-titles!important;
+                    text-decoration-line: none;
+                }
+            }
+        }
+    }
+    // Voir plus
+    main {
+        .container__internal {
+            .container__internal--title {
+                padding: $padding-titles;
+                color: $color-titles;
+                font: {
+                    family: $font-secondary;
+                    style: italic;
+                    weight: normal;
+                }
+                text-align: center;
+            }
+            .container__internal--iframe {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                padding-top: 56.25%;
+            }
+            .grid {
+                margin-top: 2rem;
+                text-align: center;
+                display: grid;
+                width: 100%;
+                height: auto;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-row-gap: 1.5rem;
+                grid-template-areas: "container__internal--videos1" "container__internal--videos2" "container__internal--videos3" "container__internal--videos4";
+                .container__internal--videos1 {
+                    grid-area: "video1";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 95%;
+                    height: 100%;
+                    margin-left: 0.8rem;
+                    margin-right: 0.8rem;
+                }
+                .container__internal--videos2 {
+                    grid-area: "video2";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 95%;
+                    height: 100%;
+                    margin-left: 0.8rem;
+                    margin-right: 0.8rem;
+                }
+                .container__internal--videos3 {
+                    grid-area: "video3";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 95%;
+                    height: 100%;
+                    margin-left: 0.8rem;
+                    margin-right: 0.8rem;
+                }
+                .container__internal--videos4 {
+                    grid-area: "video4";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 95%;
+                    height: 100%;
+                    margin-left: 0.8rem;
+                    margin-right: 0.8rem;
+                }
+            }
+        }
+    }
+    // Footer
+    footer {
+        height: 80px;
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        margin-top: 150px;
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-basis: auto;
+        padding-top: 0.7em;
+        div {
+            .subtitle {
+                font: {
+                    family: $font-principal;
+                    size: $font-email!important;
+                    weight: lighter;
+                }
+                text-decoration-line: underline;
+                margin: 0;
+                text-align: center;
+            }
+            form {
+                margin: 0;
+                text-align: center;
+                #adresse__e-mail {
                     font: {
-                        family: $font-secondary;
-                        style: italic;
-                        weight: normal;
-                        }
-        
+                        family: $font-principal;
+                        size: $font-email;
+                        style: normal;
+                        weight: lighter;
                     }
-                    // MAPA Y EACH
-                    @each $produit, $img in $carousel {
-                        .#{$produit} {
-                            height: $height-imgProduit;
-                            width: $width-imgProduit;
-                            text-align: center;
-                            background: {
-                                image: $img;
-                                position: center;
-                                repeat: no-repeat;
-                                size: cover;
-                                }
-                                position: relative;
+                    text-align: center;
+                    line-height: normal;
+                    padding: $padding-email;
+                    margin-top: 0.3rem;
+                }
+
+                .container__home--button {
+                    background-color: $bg-color-hd-ft;
+                    border: 1px solid $color-principal;
+                    border-radius: $borderRadius-btn;
+                    font: {
+                        family: $font-principal;
+                        style: normal;
+                        size: $font-email;
+                        weight: lighter;
+                    }
+                    text-align: center;
+                    width: fit-content;
+                    padding: $padding-btn;
+                    transition: all 0.8s;
+                    cursor: pointer;
+                    margin-top: 0.3rem;
+
+                    &:hover {
+                        background: $bg-color-btt;
+                        border: 1px solid $bg-color-btt;
+                    }
+                }
+            }
+            
+        }
+        .socialMedia {
+            display: none!important;
+            .social-media__links {
+                ul {
+                    li {
+                        display: inline-block;
+                        a {
+                            #smfacebook,
+                            #sminstagram {
+                                color: $color-general;
+                                font-size: $font-size-sm;
+                                margin-right: 0.2em;
+                                margin-top: 1rem;
+                            }
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+// MEDIA QUERY TABLET
+@media only screen and (min-width: $phone) and (max-width: $tablet) {
+    @mixin sizes ($width, $height-ftr) {
+        width: $width;
+        height: $height-ftr;
+    }
+    footer {
+        @include sizes(100%, 85px);
+        position: relative;
+        bottom: 0;
+        margin-top: 150px;
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-top: 0.7em;
+    }
+
+    // Contact
+    main {
+        .container__form {
+            .container__form--title {
+                color: $color-titles;
+                margin-top: 2em;
+                padding: $padding-titles;
+                text-align: center;
+                font: {
+                    family: $font-secondary;
+                    size: $font-h4;
+                    style: italic;
+                    weight: normal;
+                }
+            }
+            label {
+                font: {
+                    family: $font-secondary;
+                    style: normal;
+                    weight: 300;
+                }
+            }
+            .form-group {
+                .form-control {
+                    font: {
+                        family: $font-secondary;
+                        style: normal;
+                        weight: 300;
+                    }
+                    margin: 1em 0;
+                }
+            }
+            .newsletter {
+                font: {
+                    family: $font-secondary;
+                    style: normal;
+                    weight: 300;
+                }
+                margin-top: 1em;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                flex: 1;
+                .container__home--button {
+                    background-color: $bg-color-hd-ft;
+                    border: 1px solid $color-principal;
+                    color: $color-principal!important;
+                    border-radius: $borderRadius-btn;
+                    font: {
+                        family: $font-principal;
+                        style: normal;
+                        size: $font-email;
+                        weight: lighter;
+                    }
+                    text: {
+                        align: center!important;
+                        decoration-line: none;
+                    }
+                    width: fit-content;
+                    padding: $padding-btn;
+                    transition: all 0.8s;
+                    cursor: pointer;
+                    margin-left: 1em;
+                    &:hover {
+                        background: $bg-color-btt;
+                        border: 1px solid $bg-color-btt;
+                        color: $color-titles!important;
+                        text-decoration-line: none;
+                    }
+                }
+            }
+        }
+        .contact {
+            text-align: center!important;
+            .container__form--title {
+                color: $color-titles;
+                margin-top: 1em;
+                padding: $padding-titles;
+                text-align: center;
+                font: {
+                    family: $font-secondary;
+                    size: $font-h4;
+                    style: italic;
+                    weight: normal;
+                }
+            }
+            .contact__logos {
+                padding-bottom: 2em;
+            }
+            .container__home--buttonWhatsapp {
+                background-color: $bg-color-pages;
+                border: none;
+                color: $color-principal!important;
+                border-radius: $borderRadius-btn;
+                font: {
+                    family: $font-principal;
+                    style: normal;
+                    size: $font-general;
+                    weight: lighter;
+                }
+                text: {
+                    align: center;
+                    decoration-line: none;
+                }
+                width: fit-content;
+                padding: $padding-btn;
+                transition: all 0.8s;
+                cursor: pointer;
+            }
+            .container__boutique--card-title {
+                text-align: left;
+                margin: 0;
+                font: {
+                    family: $font-secondary;
+                    style: normal;
+                    weight: lighter;
+                }
+            }
+            .container__home--buttonModal {
+                background-color: $bg-color-hd-ft;
+                border: 1px solid $color-principal;
+                color: $color-principal!important;
+                border-radius: $borderRadius-btn;
+                font: {
+                    family: $font-principal;
+                    style: normal;
+                    size: $font-general;
+                    weight: lighter;
+                }
+                text: {
+                    align: center;
+                    decoration-line: none;
+                }
+                width: fit-content;
+                padding: $padding-btn;
+                transition: all 0.8s;
+                cursor: pointer;
+                &:hover {
+                    background: $bg-color-btt;
+                    border: 1px solid $bg-color-btt;
+                    color: $color-titles!important;
+                    text-decoration-line: none;
+                }
+            }
+        }
+    }
+    // Voir plus
+    main {
+        .container__internal {
+            .container__internal--title {
+                padding: $padding-titles;
+                color: $color-titles;
+                font: {
+                    family: $font-secondary;
+                    style: italic;
+                    weight: normal;
+                }
+                text-align: center;
+            }
+            .container__internal--iframe {
+                position: relative;
+                overflow: hidden;
+                width: 100%;
+                padding-top: 56.25%;
+            }
+            .grid {
+                margin-top: 2rem;
+                text-align: center;
+                display: grid;
+                width: 100%;
+                height: auto;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                grid-row-gap: 3rem;
+                grid-template-areas: "container__internal--videos1" "container__internal--videos2" "container__internal--videos3" "container__internal--videos4";
+                .container__internal--videos1 {
+                    grid-area: "video1";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 95%;
+                    height: 100%;
+                    margin-left: 0.8rem;
+                    margin-right: 0.8rem;
+                }
+                .container__internal--videos2 {
+                    grid-area: "video2";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 95%;
+                    height: 100%;
+                    margin-left: 0.8rem;
+                    margin-right: 0.8rem;
+                }
+                .container__internal--videos3 {
+                    grid-area: "video3";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 95%;
+                    height: 100%;
+                    margin-left: 0.8rem;
+                    margin-right: 0.8rem;
+                }
+                .container__internal--videos4 {
+                    grid-area: "video4";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 95%;
+                    height: 100%;
+                    margin-left: 0.8rem;
+                    margin-right: 0.8rem;
+                }
+            }
+        }
+    }
 }

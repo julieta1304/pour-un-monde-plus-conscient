@@ -14,8 +14,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: auto;
-  min-height: 100%; }
+  position: relative;
+  min-height: 100vh !important;
+  width: 100% !important; }
 
 .homeBody {
   background-attachment: fixed;
@@ -23,7 +24,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  min-height: 100vh !important;
+  width: 100% !important;
   position: relative; }
 
 h1 {
@@ -46,6 +48,11 @@ p {
 footer,
 header {
   background-color: rgba(255, 255, 255, 0.7); }
+
+main {
+  min-height: 100vh !important;
+  width: 100% !important;
+  padding-bottom: 27rem; }
 
 header {
   position: relative;
@@ -83,9 +90,6 @@ header {
       header .nav .nav-link:hover {
         text-decoration-line: underline;
         color: black; }
-
-main {
-  padding-bottom: 85px; }
 
 main .carousel .carousel__title {
   color: white;
@@ -603,24 +607,25 @@ main .table-responsive .table {
     text-align: center;
     padding: 0.1rem; }
 
-footer {
-  width: 100%;
+.pieDePagina {
+  width: 100% !important;
   height: 85px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: relative;
-  bottom: 0;
-  margin-top: 225px;
+  position: absolute !important;
+  bottom: 0 !important;
+  left: 0;
+  right: 0;
   padding-top: 1rem; }
-  footer div .subtitle {
+  .pieDePagina div .subtitle {
     font-family: "Handlee", cursive;
     font-weight: lighter;
     text-decoration-line: underline;
     margin: auto; }
-  footer div form {
+  .pieDePagina div form {
     margin: auto; }
-    footer div form #adresse__e-mail {
+    .pieDePagina div form #adresse__e-mail {
       font-family: "Handlee", cursive;
       font-size: 1.1rem;
       font-style: normal;
@@ -629,7 +634,7 @@ footer {
       line-height: normal;
       padding: 0em 0.3em;
       width: fit-content; }
-    footer div form .container__home--button {
+    .pieDePagina div form .container__home--button {
       background-color: rgba(255, 255, 255, 0.7);
       border: 1px solid #3b9655;
       border-radius: 0.6em;
@@ -643,16 +648,16 @@ footer {
       transition: all 0.8s;
       cursor: pointer;
       margin-left: 0.7em; }
-      footer div form .container__home--button:hover {
+      .pieDePagina div form .container__home--button:hover {
         background: #296b3c;
         border: 1px solid #296b3c; }
-    footer div form .container__boutique--card-title {
+    .pieDePagina div form .container__boutique--card-title {
       text-align: left;
       margin: 0;
       font-family: "Comfortaa", cursive;
       font-style: normal;
       font-weight: lighter; }
-    footer div form .container__home--buttonModal {
+    .pieDePagina div form .container__home--buttonModal {
       background-color: rgba(255, 255, 255, 0.7);
       border: 1px solid #3b9655;
       color: #3b9655 !important;
@@ -667,20 +672,24 @@ footer {
       padding: 0.2em;
       transition: all 0.8s;
       cursor: pointer; }
-      footer div form .container__home--buttonModal:hover {
+      .pieDePagina div form .container__home--buttonModal:hover {
         background: #296b3c;
         border: 1px solid #296b3c;
         color: white !important;
         text-decoration-line: none; }
-  footer div .social-media__links ul li {
+  .pieDePagina div .social-media__links ul li {
     display: inline-block; }
-    footer div .social-media__links ul li a #smfacebook,
-    footer div .social-media__links ul li a #sminstagram {
+    .pieDePagina div .social-media__links ul li a #smfacebook,
+    .pieDePagina div .social-media__links ul li a #sminstagram {
       color: black;
       font-size: 2rem;
       margin-right: 0.4em; }
 
 @media only screen and (max-width: 767px) {
+  main {
+    min-height: 100vh !important;
+    width: 100% !important;
+    padding-bottom: 21rem; }
   main .container__home {
     width: fit-content;
     position: fixed;
@@ -934,29 +943,29 @@ footer {
       height: 100%;
       margin-left: 0.8rem;
       margin-right: 0.8rem; }
-  footer {
+  .pieDePagina {
     height: 80px;
     width: 100%;
-    position: relative;
-    bottom: 0;
-    margin-top: 150px;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0;
+    right: 0;
     padding-top: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-basis: auto;
-    padding-top: 0.7em; }
-    footer div .subtitle {
+    flex-basis: auto; }
+    .pieDePagina div .subtitle {
       font-family: "Handlee", cursive;
       font-size: 1.1rem !important;
       font-weight: lighter;
       text-decoration-line: underline;
       margin: 0;
       text-align: center; }
-    footer div form {
+    .pieDePagina div form {
       margin: 0;
       text-align: center; }
-      footer div form #adresse__e-mail {
+      .pieDePagina div form #adresse__e-mail {
         font-family: "Handlee", cursive;
         font-size: 1.1rem;
         font-style: normal;
@@ -965,7 +974,7 @@ footer {
         line-height: normal;
         padding: 0em 0.3em;
         margin-top: 0.3rem; }
-      footer div form .container__home--button {
+      .pieDePagina div form .container__home--button {
         background-color: rgba(255, 255, 255, 0.7);
         border: 1px solid #3b9655;
         border-radius: 0.6em;
@@ -979,32 +988,36 @@ footer {
         transition: all 0.8s;
         cursor: pointer;
         margin-top: 0.3rem; }
-        footer div form .container__home--button:hover {
+        .pieDePagina div form .container__home--button:hover {
           background: #296b3c;
           border: 1px solid #296b3c; }
-    footer .socialMedia {
+    .pieDePagina .socialMedia {
       display: none !important; }
-      footer .socialMedia .social-media__links ul li {
+      .pieDePagina .socialMedia .social-media__links ul li {
         display: inline-block; }
-        footer .socialMedia .social-media__links ul li a #smfacebook,
-        footer .socialMedia .social-media__links ul li a #sminstagram {
+        .pieDePagina .socialMedia .social-media__links ul li a #smfacebook,
+        .pieDePagina .socialMedia .social-media__links ul li a #sminstagram {
           color: black;
           font-size: 2rem;
           margin-right: 0.2em;
           margin-top: 1rem; } }
 
-@media only screen and (min-width: 767px) and (max-width: 1024px) {
-  footer {
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  main {
+    min-height: 100vh !important;
+    width: 100% !important;
+    padding-bottom: 27rem; }
+  .pieDePagina {
     width: 100%;
     height: 85px;
-    position: relative;
-    bottom: 0;
-    margin-top: 150px;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0;
+    right: 0;
     padding-top: 1rem;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    padding-top: 0.7em; }
+    justify-content: flex-start; }
   main .container__form .container__form--title {
     color: white;
     margin-top: 2em;
